@@ -1,6 +1,6 @@
 /**
  * @author Jose Manuel Sabarís
- * Título: Ejercicio 
+ * Título: Ejercicio Acepta El Reto 170
  * @version 1.0 
  */
 
@@ -23,7 +23,7 @@ public class AceptaElReto_170 {
         // Inicialización
         // Creación de objetos
         
-        // Entrada de datos y resolución del programa
+        // Entrada de datos, resolución del programa y salida
         while ( true ) {
             
             cantidad = entrada.nextInt();
@@ -45,8 +45,6 @@ public class AceptaElReto_170 {
             }
         }
         
-        // Salida de datos
-
 
     } // fin de main
     
