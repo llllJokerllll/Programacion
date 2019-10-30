@@ -1,0 +1,26 @@
+Proceso sin_titulo
+	
+	Definir num1 Como Entero;
+	Definir contador Como Entero;
+	Definir a,b,c Como Entero;
+	
+	a <- 0;
+	b <- 1;
+	c <- 0;
+	Leer num1;
+	
+	Mientras num1 < 6 | num1 MOD 2 <> 0 Hacer
+		Leer num1;
+	FinMientras
+	
+	//Escribir "0";
+	//Escribir "1";
+	Para contador <- 1 Hasta num1 Con Paso 1 Hacer
+		Escribir Sin Saltar c, ", ";
+		c <- a + b;
+		b <- a;
+		a <- c;
+		
+
+	FinPara
+FinProceso

@@ -1,0 +1,47 @@
+Proceso sin_titulo
+	
+	//Zona de declaración de variables
+    Definir a,b,i,j,k como entero;
+    //a = base(Filas horizontales)
+    //b = altura(Filas verticales)
+    //i,j,k = Variables que uso para contabilizar las vueltas del bucle para;
+    //i = Piso actual
+    //j = Variable que utilizo para contabilizar el número de asteriscos que hay que poner en el lado superior e inferior, añadiendo 1 por cada vuelta hasta llegar al valor de a;
+    //k = Variable que utilizo para contabilizar la cantidad de espacios que tengo que añadirle al rectángulo en cada piso.
+	
+    //Entrada de datos
+    Escribir Sin Saltar "Introduce la base del rectángulo: ";
+    leer a;
+    Escribir Sin Saltar "Introduce la altura del rectángulo: ";
+    leer b;
+	
+    //**Programita
+    Para i<-1 Hasta b Con Paso 1 Hacer
+		
+		
+        si(i==1 o i==b) Entonces//Primera y última fila
+			
+            Para j<-1 Hasta a Con Paso 1 Hacer
+                Escribir Sin Saltar "*";
+            FinPara
+			
+            Escribir "";
+			
+        SiNo //Resto de Filas
+			
+            Escribir sin saltar "*" ;
+			
+            Para k<-1 Hasta a-2 Con Paso 1 Hacer
+                Escribir sin saltar " ";
+            FinPara
+			
+            Escribir "*";
+			
+			
+        FinSi
+		
+		
+    FinPara
+	
+	
+FinProceso
