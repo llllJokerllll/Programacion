@@ -15,6 +15,7 @@ public class AceptaElReto_241 {
         // Entrada de datos
         int casos, nHojas;
         // Salida de datos
+        int tCuatroHojas;
         // Operativa
         Scanner entrada = new Scanner( System.in );
         int contador;
@@ -28,12 +29,15 @@ public class AceptaElReto_241 {
         
         for ( contador = 0; contador != casos; contador++ ) {
             nHojas = entrada.nextInt();
-            if ( nHojas % 3 == 1 && nHojas > 3 ) {
-                System.out.println( "1" );
-            } else if ( nHojas == 3 ) {
-                System.out.println( "0" );
-            } else {
+            tCuatroHojas = 0;
+            while ( nHojas > 0 && nHojas % 3 != 0 ) {
+                nHojas -= 4;
+                tCuatroHojas++;
+            }
+            if ( nHojas < 3 && nHojas != 0 ) {
                 System.out.println( "IMPOSIBLE" );
+            } else {
+                System.out.println( tCuatroHojas );
             }
         }
         
