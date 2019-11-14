@@ -21,7 +21,6 @@ public class Ejercicio_Array_2_JoseManuelSabaris {
         // Constantes
         // Inicialización
         
-        // Creación de objetos
         
         // Entrada de datos, resolución del programa y salida
         for ( contador1 = 0; contador1 < matrizUnitaria.length; contador1++ ) {

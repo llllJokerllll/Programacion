@@ -1,4 +1,4 @@
-/**
+ /**
  * @author Jose Manuel Sabarís
  * Título: Ejercicio 
  * @version 1.0 
@@ -18,16 +18,20 @@ public class Ejercicio_Array_3_JoseManuelSabaris {
         // Salida de datos
         int[][] matriz = new int[ 10 ][ 10 ];
         // Operativa
-        Random valorAzar = new Random(32);
+        Random valorAzar = new Random();
+        int contador1, contador2;
         // Constantes
         // Inicialización
         
-        // Creación de objetos
         
-        // Entrada de datos y resolución del programa
-
-        
-        // Salida de datos
+        // Entrada de datos, resolución del programa y salida
+        for ( contador1 = 0; contador1 < matriz.length; contador1++ ) {
+            for ( contador2 = 0; contador2 < matriz[ contador1 ].length; contador2++ ) {
+                matriz[ contador1 ][ contador2 ] = valorAzar.nextInt(32);
+                System.out.printf( "%2d  ", matriz[ contador1 ][ contador2 ] );
+            }
+            System.out.println( "" );
+        }
 
 
     } // fin de main
