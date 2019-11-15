@@ -1,6 +1,6 @@
 /**
  * @author Jose Manuel Sabarís
- * Título: Ejercicio 
+ * Título: Ejercicio Array 8
  * @version 1.0 
  */
 // Programa Java para leer la altura de N personas y calcular la altura media.
@@ -18,7 +18,8 @@ public class Ejercicio_Array_8_JoseManuelSabaris {
         // Entrada de datos
         int casos;
         // Salida de datos
-        double alturaMedia, mediaSuperior, mediaInferior;
+        double alturaMedia; 
+        int mediaSuperior, mediaInferior;
         // Operativa
         Scanner entrada = new Scanner( System.in );
         int contador;
@@ -28,10 +29,12 @@ public class Ejercicio_Array_8_JoseManuelSabaris {
         mediaSuperior = mediaInferior = 0;
         
         // Entrada de datos y resolución del programa
+        System.out.println( "Por favor, introduzca el número de personas" );
         casos = entrada.nextInt();
         double[] alturas = new double[ casos ];
         
         for ( contador = 0; contador < casos; contador++ ) {
+            System.out.println( "Por favor, introduzca la altura" );
             alturas[ contador ] = entrada.nextDouble();
             alturaMedia += alturas[ contador ];
         }

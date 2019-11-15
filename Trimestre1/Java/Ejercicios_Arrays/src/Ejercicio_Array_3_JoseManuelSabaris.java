@@ -1,6 +1,6 @@
  /**
  * @author Jose Manuel Sabarís
- * Título: Ejercicio 
+ * Título: Ejercicio Array 3
  * @version 1.0 
  */
 // Programa que le de valores al azar comprendidos entre 0 y 31 a una tabla de dimensiones 10x10.

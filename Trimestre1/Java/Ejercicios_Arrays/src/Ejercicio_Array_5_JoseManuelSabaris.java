@@ -1,6 +1,6 @@
 /**
  * @author Jose Manuel Sabarís
- * Título: Ejercicio 
+ * Título: Ejercicio Array 5
  * @version 1.0 
  */
 // Crear una matriz de enteros de 3 filas x 3 columnas.

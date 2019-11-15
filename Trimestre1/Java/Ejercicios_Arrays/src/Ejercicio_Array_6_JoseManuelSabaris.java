@@ -1,6 +1,6 @@
 /**
  * @author Jose Manuel Sabarís
- * Título: Ejercicio 
+ * Título: Ejercicio Array 6
  * @version 1.0 
  */
 // Programa Java que guarda en un array 10 números enteros que se leen por teclado.

@@ -1,6 +1,6 @@
 /**
  * @author Jose Manuel Sabarís
- * Título: Ejercicio 
+ * Título: Ejercicio Array 4
  * @version 1.0 
  */
 // Programa en el que se declare una matriz de dimensiones 5 x 8 (5 filas y 8 columnas) de datos de tipo entero.

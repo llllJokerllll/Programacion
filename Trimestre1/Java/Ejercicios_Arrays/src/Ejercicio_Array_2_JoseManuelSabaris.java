@@ -1,6 +1,6 @@
 /**
  * @author Jose Manuel Sabarís
- * Título: Ejercicio 
+ * Título: Ejercicio Array 2
  * @version 1.0 
  */
 // Hacer un programa que le de valores a una matriz unitaria de orden 10. 
