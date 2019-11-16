@@ -11,7 +11,7 @@
 // Importación de librerías
 import java.util.Random;
 
-public class Ejercicio_Array_4_JoseManuelSabaris {
+public class OB_4_MenorAzar_20x40_JMS {
 
     public static void main( String[] args ) {
         
@@ -57,5 +57,5 @@ public class Ejercicio_Array_4_JoseManuelSabaris {
         
     } // fin de main
     
-} // fin de la clase Ejercicio_Array_4_JoseManuelSabaris
+} // fin de la clase OB_4_MenorAzar_20x40_JMS
 

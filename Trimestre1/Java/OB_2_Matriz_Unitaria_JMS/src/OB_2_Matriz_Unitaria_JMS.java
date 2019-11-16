@@ -8,7 +8,7 @@
 
 // Importación de librerías
 
-public class Ejercicio_Array_2_JoseManuelSabaris {
+public class OB_2_Matriz_Unitaria_JMS {
 
     public static void main( String[] args ) {
         
@@ -36,5 +36,5 @@ public class Ejercicio_Array_2_JoseManuelSabaris {
 
     } // fin de main
     
-} // fin de la clase Ejercicio_Array_2_JoseManuelSabaris
+} // fin de la clase OB_2_Matriz_Unitaria_JMS
 

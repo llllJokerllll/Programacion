@@ -9,7 +9,7 @@
 // Importación de librerías
 import java.util.Scanner;
 
-public class Ejercicio_Array_9_JoseManuelSabaris {
+public class OB_9_ArrayValorySuma_JMS {
 
     public static void main( String[] args ) {
         
@@ -27,6 +27,7 @@ public class Ejercicio_Array_9_JoseManuelSabaris {
         // Entrada de datos y resolución del programa
         for ( contador1 = 0; contador1 < matriz.length; contador1++ ) {
             for( contador2 = 0; contador2 < matriz[ contador1 ].length; contador2 ++ ) {
+                System.out.println( "Por favor, introduzca un valor" );
                 matriz[ contador1 ][ contador2 ] = entrada.nextInt();
                 suma += matriz[ contador1 ][ contador2 ];
             }
@@ -48,5 +49,5 @@ public class Ejercicio_Array_9_JoseManuelSabaris {
 
     } // fin de main
     
-} // fin de la clase Ejercicio_Array_9_JoseManuelSabaris
+} // fin de la clase OB_9_ArrayValorySuma_JMS
 

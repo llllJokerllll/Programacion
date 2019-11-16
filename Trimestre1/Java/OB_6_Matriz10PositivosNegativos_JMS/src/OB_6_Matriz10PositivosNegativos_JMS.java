@@ -9,7 +9,7 @@
 // Importación de librerías
 import java.util.Scanner;
 
-public class Ejercicio_Array_6_JoseManuelSabaris {
+public class OB_6_Matriz10PositivosNegativos_JMS {
 
     public static void main( String[] args ) {
         
@@ -46,5 +46,5 @@ public class Ejercicio_Array_6_JoseManuelSabaris {
 
     } // fin de main
     
-} // fin de la clase Ejercicio_Array_6_JoseManuelSabaris
+} // fin de la clase OB_6_Matriz10PositivosNegativos_JMS
 

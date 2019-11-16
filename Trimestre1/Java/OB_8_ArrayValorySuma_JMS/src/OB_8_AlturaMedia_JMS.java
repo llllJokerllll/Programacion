@@ -10,7 +10,7 @@
 // Importación de librerías
 import java.util.Scanner;
 
-public class Ejercicio_Array_8_JoseManuelSabaris {
+public class OB_8_AlturaMedia_JMS {
 
     public static void main( String[] args ) {
         
@@ -54,5 +54,5 @@ public class Ejercicio_Array_8_JoseManuelSabaris {
 
     } // fin de main
     
-} // fin de la clase Ejercicio_Array_8_JoseManuelSabaris
+} // fin de la clase OB_8_AlturaMedia_JMS
 
