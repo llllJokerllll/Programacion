@@ -6,7 +6,7 @@
 
 /**
  * @author Jose Manuel Sabarís García <Josemsabaris@gmail.com>
- * Título: Ejercicio 
+ * Título: Ejercicio MaisdeArrays_6
  * @version 1.0
  */
 // Construir un programa que rellene de forma automática dos vectores de números reales
