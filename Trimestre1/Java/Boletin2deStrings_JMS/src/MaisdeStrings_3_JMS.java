@@ -6,32 +6,38 @@
 
 /**
  * @author Jose Manuel Sabarís García <Josemsabaris@gmail.com>
- * Título: Ejercicio MaisdeStrings_1
+ * Título: Ejercicio MaisdeStrings_3
  * @version 1.0
  */
-// Crear un programa que muestre cuantos parámetros se le pasan por línea de comandos.
+// Contar el número de palabras de una frase.
 
 // Importación de librerías
+import java.util.Scanner;
+import java.util.StringTokenizer;
 
-public class MaisdeStrings_1_JMS {
+public class MaisdeStrings_3_JMS {
 
     public static void main( String[] args ) {
         
         // Declaración de variables
         // Entrada de datos
+        String frase;
         // Salida de datos
         // Operativa
         // Constantes
-        // Inicialización        
+        // Inicialización
         // Creación de objetos
+        Scanner entrada = new Scanner( System.in );
         
         // Entrada de datos y resolución del programa
-
+        System.out.println( "Por favor, introduzca una frase" );
+        frase = entrada.nextLine();
+        StringTokenizer contador = new StringTokenizer(frase);
         
         // Salida de datos
-        System.out.println( "Ha pasado " + args.length + " parametros" );
+        System.out.println( "El número de palabras en tu frase es: " + contador.countTokens() );
 
     } // fin de main
     
-} // fin de la clase MaisdeStrings_1_JMS
+} // fin de la clase MaisdeStrings_3_JMS
 

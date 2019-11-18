@@ -6,32 +6,40 @@
 
 /**
  * @author Jose Manuel Sabarís García <Josemsabaris@gmail.com>
- * Título: Ejercicio MaisdeStrings_1
+ * Título: Ejercicio 
  * @version 1.0
  */
-// Crear un programa que muestre cuantos parámetros se le pasan por línea de comandos.
+// Eliminar la última palabra de una frase.
 
 // Importación de librerías
+import java.util.Scanner;
 
-public class MaisdeStrings_1_JMS {
+public class MaisdeStrings_4_JMS {
 
     public static void main( String[] args ) {
         
         // Declaración de variables
         // Entrada de datos
+        String frase;
         // Salida de datos
         // Operativa
+        int posicion;
         // Constantes
         // Inicialización        
         // Creación de objetos
+        Scanner entrada = new Scanner( System.in );
         
         // Entrada de datos y resolución del programa
-
+        System.out.println( "Por favor, introduzca una frase" );
+        frase = entrada.nextLine();
+        frase = frase.trim();
+        posicion = frase.lastIndexOf( " " );
+        frase = frase.substring( 0, posicion );
         
         // Salida de datos
-        System.out.println( "Ha pasado " + args.length + " parametros" );
+        System.out.println( frase );
 
     } // fin de main
     
-} // fin de la clase MaisdeStrings_1_JMS
+} // fin de la clase MaisdeStrings_4_JMS
 
