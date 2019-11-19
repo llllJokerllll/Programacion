@@ -23,11 +23,13 @@ public class MaisdeArrays_4_JMS {
         // Declaración de variables
         // Entrada de datos
         // Salida de datos
+        String resultado;
         // Operativa
-        int contador;
+        int contador, contador2, edadMax;
         // Constantes
         // Inicialización
-        contador = 0;
+        contador = edadMax = 0;
+        resultado = "Los alumnos que tienen mayor edad son: \n";
         // Creación de objetos
         Scanner entrada = new Scanner( System.in );
         int[] edades = new int[ 35 ];
@@ -37,19 +39,28 @@ public class MaisdeArrays_4_JMS {
         while ( contador < edades.length ) {
             System.out.println( "Por favor, introduzca el nombre del alumno" );
             nomAlumno[ contador ] = entrada.next();
-            if ( nomAlumno[ contador ].equals( "*" ) ) break;
+            if ( nomAlumno[ contador ].equals( "*" ) ) {
+                break;
+            }
             System.out.println( "Por favor, introduzca la edad del alumno" );
             edades[ contador ] = entrada.nextInt();
+            if ( edadMax < edades[ contador ] ) {
+                edadMax = edades[ contador ];
+            }
             contador++;
         }
         
         // Salida de datos
         System.out.println( "Los alumnos mayores de edad son los siguientes:" );
-        for ( contador = 0; contador < nomAlumno.length; contador++ ) {
-            if ( edades[ contador ] > 17 ) {
-                System.out.println( nomAlumno[ contador ] + " " + edades[ contador ] + " años." );
+        for ( contador2 = 0; contador2 < contador; contador2++ ) {
+            if ( edades[ contador2 ] > 17 ) {
+                System.out.println( nomAlumno[ contador2 ] + " " + edades[ contador2 ] + " años." );
+            }
+            if ( edades[ contador2 ] == edadMax ) {
+                resultado += nomAlumno[ contador2 ] + " " + edades[ contador2 ] + "\n";
             }
         }
+        System.out.println( resultado );
 
     } // fin de main
     
