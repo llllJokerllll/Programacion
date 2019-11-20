@@ -39,15 +39,21 @@ public class MaisdeStrings_10_JMS {
         contrasinalForte( contrasinal );
 
     } // fin de main
+    
     public static void contrasinalForte ( String cadena ) {
         
+        // Salida de datos
         int auxMayus, auxMinus, auxNum;
+        // Operativa
         int contador1, contador2, contadorNums;
+        // Constantes
         final String MAYUS = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
         final String MINUS = "abcdefghijklmnñopqrstuvwxyz";
         final String NUMS = "0123456789";
+        // Inicialización
         auxMayus = auxMinus = auxNum = 0;
         
+        // Resolucion del programa y salida de datos
         if ( cadena.length() < 8 ) {
             System.out.println( "Contraseña demasiado corta" );
         } else {
@@ -72,6 +78,8 @@ public class MaisdeStrings_10_JMS {
                 System.out.println( "Contraseña débil" );
             }
         }
-    }
+        
+    } // fin de contrasinalForte
+    
 } // fin de la clase MaisdeStrings_10_JMS
 

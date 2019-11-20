@@ -54,11 +54,17 @@ public class MaisdeStrings_9_JMS {
     } // fin de main
 
     public static double iMasaCorporal( double n, double m ) {
+        
+        // Salida de datos
         double resultado;
+        
+        // Resolución del programa
         resultado = n / Math.pow( m, 2 );
-
+        
+        // Salida
         return ( resultado );
-    }
+        
+    } // fin de iMasaCorporal
 
 } // fin de la clase MaisdeStrings_9_JMS
 
