@@ -33,23 +33,19 @@ public class MaisdeArrays_10_JMS {
         String[][] ciudades = new String[ 4 ][ 3 ];
         
         // Entrada de datos y resolución del programa
-        for ( contador1 = 0; contador1 < paises.length; contador1++ ) {
-            System.out.println( "Por favor, introduzca el nombre del país" );
-            paises[ contador1 ] = entrada.next();
-        }
         for ( contador1 = 0; contador1 < ciudades.length; contador1++ ) {
+            System.out.println( "Por favor, introduzca el nombre del país" );
+            paises[ contador1 ] = entrada.nextLine();
             for ( contador2 = 0; contador2 < ciudades[ contador1 ].length; contador2++ ) {
                 System.out.println( "Por favor, introduzca el nombre de la ciudad" );
-                ciudades[ contador1 ][ contador2 ] = entrada.next();
+                ciudades[ contador1 ][ contador2 ] = entrada.nextLine();
             }
         }
         
         // Salida de datos
         for ( contador1 = 0; contador1 < ciudades.length; contador1++ ) {
+            System.out.printf( "País: %-15s%s" , paises[ contador1 ], "Ciudades:  " );
             for ( contador2 = 0; contador2 < ciudades[ contador1 ].length; contador2++ ) {
-                if ( contador2 == 0 ) {
-                    System.out.printf( "País: %-15s%s" , paises[ contador1 ], "Ciudades:  " );
-                }
                 System.out.printf( "%-11s", ciudades[ contador1 ][ contador2 ] );
             }
             System.out.println( "" );
