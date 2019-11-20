@@ -14,22 +14,30 @@ package com.acarballeira.pruebas;
 //
 
 // Importación de librerías
+import java.util.Scanner;
+import java.io.InputStream;
 
 public class Leer_TxT {
 
+    public static void main( String[] args ) {
+        
         // Declaración de variables
         // Entrada de datos
+        InputStream ficheiro = Leer_TxT.class.getResourceAsStream("texto.txt");
         // Salida de datos
         // Operativa
         // Constantes
         // Inicialización        
         // Creación de objetos
+        Scanner entrada = new Scanner( ficheiro );
         
         // Entrada de datos y resolución del programa
-
+        while ( entrada.hasNext() ) {
+            System.out.println( entrada.nextLine() );
+        }
         
         // Salida de datos
-
+        entrada.close();
 
     } // fin de main
     
