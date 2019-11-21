@@ -29,13 +29,31 @@ public class MaisdeArrays_12_JMS {
         // Inicialización        
         // Creación de objetos
         Scanner entrada = new Scanner( System.in );
-        String[][] articulos = new String[2][10];
+        String[][][] articulos = {
+                                 { 
+                                     {"Puma","Zapatillas","55.99"},
+                                   {"Azul","Rojo","Amarillo","Negro"},
+                                   {"40.0","41.5","42.5","44.5","45.5"} 
+                                 },
+                                 { 
+                                     {"Nike","Sudadera","34.99"},
+                                   {"Azul","Rojo","Amarillo","Negro","Violeta"},
+                                   {"S","M","L","XL","XXL"} 
+                                 },
+                                };
         
         // Entrada de datos y resolución del programa
-
+        
         
         // Salida de datos
-
+        for ( String[][] x : articulos ) {
+            for ( String[] y : x ) {
+                for ( String z : y ) {
+                    System.out.printf( "%-12s", z );
+                }
+            }
+            System.out.println( "" );
+        }
 
     } // fin de main
     

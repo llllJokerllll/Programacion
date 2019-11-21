@@ -1,29 +1,28 @@
 /*
  * Documento creado no 2019 por DAWDU10
- * CIFP A Carballeira. Proyecto Leer_TxT en 15 nov. 2019
+ * CIFP A Carballeira. Proyecto Boletin2deStrings_JMS en 21 nov. 2019
  * Contenido con licencia Creative Commons CC BY-NC-SA.
  */
 
-package com.acarballeira.pruebas;
-
 /**
  * @author Jose Manuel Sabarís García <Josemsabaris@gmail.com>
- * Título: Ejercicio Leer_TxT
+ * Título: Ejercicio MaisdeStrings_16
  * @version 1.0
  */
-//
+// Emprega a clase Scanner para ler as liñas dun ficheiro de texto e amosa o resultado mediante
+// consola.
 
 // Importación de librerías
 import java.util.Scanner;
 import java.io.InputStream;
 
-public class Leer_TxT {
+public class MaisdeStrings_16_JMS {
 
     public static void main( String[] args ) {
         
         // Declaración de variables
         // Entrada de datos
-        InputStream ficheiro = Leer_TxT.class.getResourceAsStream("texto.txt");
+        InputStream ficheiro = MaisdeStrings_16_JMS.class.getResourceAsStream("texto.txt");
         // Salida de datos
         // Operativa
         // Constantes
@@ -41,5 +40,5 @@ public class Leer_TxT {
 
     } // fin de main
     
-} // fin de la clase Leer_TxT
+} // fin de la clase MaisdeStrings_16_JMS
 

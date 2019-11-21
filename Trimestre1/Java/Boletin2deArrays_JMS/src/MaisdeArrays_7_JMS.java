@@ -31,7 +31,7 @@ public class MaisdeArrays_7_JMS {
         
         // Entrada de datos y resolución del programa
         Arrays.fill( vector1, 10 );
-        vector2 = Arrays.copyOfRange( vector1, 1, 8 );
+        vector2 = Arrays.copyOfRange( vector1, 1, 9 );
         
         // Salida de datos
         for ( int x : vector1 ) {
@@ -41,7 +41,8 @@ public class MaisdeArrays_7_JMS {
         for ( int y : vector2 ) {
             System.out.print( y + " ");
         }
-
+        System.out.println( "" );
+        
     } // fin de main
     
 } // fin de la clase MaisdeArrays_7_JMS
