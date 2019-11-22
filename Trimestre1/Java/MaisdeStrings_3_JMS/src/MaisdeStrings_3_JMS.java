@@ -32,7 +32,7 @@ public class MaisdeStrings_3_JMS {
         // Entrada de datos y resolución del programa
         System.out.println( "Por favor, introduzca una frase" );
         frase = entrada.nextLine();
-        StringTokenizer contador = new StringTokenizer(frase);
+        StringTokenizer contador = new StringTokenizer( frase );
         
         // Salida de datos
         System.out.println( "El número de palabras en tu frase es: " + contador.countTokens() );
