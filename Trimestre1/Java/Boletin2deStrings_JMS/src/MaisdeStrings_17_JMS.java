@@ -32,6 +32,8 @@ public class MaisdeStrings_17_JMS {
         // Creación de objetos
         Scanner entrada = new Scanner( System.in );
         StringBuilder textoReves = new StringBuilder();
+        StringBuilder textoOrdenado = new StringBuilder();
+        StringBuilder textoOrdRev = new StringBuilder();
         
         // Entrada de datos
         System.out.println( "Por favor, introduzca su texto" );
@@ -39,8 +41,15 @@ public class MaisdeStrings_17_JMS {
         
         // Resolución del programa
         String[] textoVector = texto.split( " " );
-        for ( contador1 = textoVector.length - 1; contador1 <= 0; contador1-- ) {
-            textoReves.append( textoVector[ contador1 ] );
+        String[] palabrasOrdenadas1 = ( String[] ) textoVector.clone();
+        Arrays.sort( palabrasOrdenadas1 );
+        for ( contador1 = textoVector.length - 1; contador1 >= 0; contador1-- ) {
+            textoReves.append( textoVector[ contador1 ] + " " );
+            textoOrdRev.append( palabrasOrdenadas1[ contador1 ] + " " );
+            
+        }
+        for ( String x : palabrasOrdenadas1 ) {
+            textoOrdenado.append( x + " " );
         }
         
         // Salida de datos
@@ -48,6 +57,8 @@ public class MaisdeStrings_17_JMS {
         System.out.println( "La primera palabra es: " + textoVector[ 0 ] );
         System.out.println( "La última palabra es: " + textoVector[ textoVector.length - 1 ] );
         System.out.println( textoReves );
+        System.out.println( "Las palabras ordenadas de la a, a la z son: " + textoOrdenado );
+        System.out.println( "Las palabras ordenadas de la z, a la a son: " + textoOrdRev );
         
         
     } // fin de main
