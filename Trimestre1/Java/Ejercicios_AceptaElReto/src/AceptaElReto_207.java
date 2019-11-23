@@ -21,10 +21,12 @@ public class AceptaElReto_207 {
         // Entrada de datos
         int alto, ancho, nArboles; 
         // Salida de datos
+        int totalSombra;
         // Operativa
-        int contador1, contador2;
+        int contador1, contador2, contador3, contador4;
         // Constantes
-        // Inicialización        
+        // Inicialización
+        totalSombra = 0;
         // Creación de objetos
         Scanner entrada = new Scanner( System.in );
         
@@ -63,6 +65,66 @@ public class AceptaElReto_207 {
                             if ( bosque[ 1 ][ ancho - 2 ] != 1 ) {
                                 bosque[ 1 ][ ancho - 2 ] = 7;
                             }
+                        } else if ( contador1 == alto - 1 && contador2 == 0 ) {
+                            if ( bosque[ alto - 1 ][ 1 ] != 1 ) {
+                                bosque[ alto - 1 ][ 1 ] = 7;
+                            }
+                            if ( bosque[ alto - 2 ][ 0 ] != 1 ) {
+                                bosque[ alto - 2 ][ 0 ] = 7;
+                            }
+                            if ( bosque[ alto - 2 ][ 1 ] != 1 ) {
+                                bosque[ alto - 2 ][ 1 ] = 7;
+                            }
+                        } else if ( contador1 == alto - 1 && contador2 == ancho - 1 ) {
+                            if ( bosque[ alto - 1 ][ ancho - 2 ] != 1 ) {
+                                bosque[ alto - 1 ][ ancho - 2 ] = 7;
+                            }
+                            if ( bosque[ alto - 2 ][ ancho - 1 ] != 1 ) {
+                                bosque[ alto - 2 ][ ancho - 1 ] = 7;
+                            }
+                            if ( bosque[ alto - 2 ][ ancho - 2 ] != 1 ) {
+                                bosque[ alto - 2 ][ ancho - 2 ] = 7;
+                            }
+                        } else if ( contador1 == 0 && contador2 > 0 && contador2 < ancho - 1 ) {
+                            for ( contador3 = 0; contador3 <= 1; contador3++ ) {
+                                for ( contador4 = contador2 - 1; contador4 <= contador2 + 1; contador4++ ) {
+                                    if ( bosque[ contador3 ][ contador4 ] != 1 ) {
+                                        bosque[ contador3 ][ contador4 ] = 7;
+                                    }
+                                }
+                            }
+                        } else if ( contador2 == 0 && contador1 > 0 && contador1 < alto - 1 ) {
+                            for ( contador3 = 0; contador3 <= 1; contador3++ ) {
+                                for ( contador4 = contador1 - 1; contador4 <= contador1 + 1; contador4++ ) {
+                                    if ( bosque[ contador4 ][ contador3 ] != 1 ) {
+                                        bosque[ contador4 ][ contador3 ] = 7;
+                                    }
+                                }
+                            }
+                        } else if ( contador1 == alto - 1 && contador2 > 0 && contador2 < ancho - 1 ) {
+                            for ( contador3 = alto - 1; contador3 >= alto - 2; contador3-- ) {
+                                for ( contador4 = contador2 - 1; contador4 <= contador2 + 1; contador4++ ) {
+                                    if ( bosque[ contador3 ][ contador4 ] != 1 ) {
+                                        bosque[ contador3 ][ contador4 ] = 7;
+                                    }
+                                }
+                            }
+                        } else if ( contador2 == ancho - 1 && contador1 > 0 && contador1 < alto - 1 ) {
+                            for ( contador3 = ancho - 1; contador3 >= ancho - 2; contador3-- ) {
+                                for ( contador4 = contador1 - 1; contador4 <= contador1 + 1; contador4++ ) {
+                                    if ( bosque[ contador4 ][ contador3 ] != 1 ) {
+                                        bosque[ contador4 ][ contador3 ] = 7;
+                                    }
+                                }
+                            }
+                        } else {
+                            for ( contador3 = contador1 - 1; contador3 <= contador1 + 1; contador3++ ) {
+                                for ( contador4 = contador2 - 1; contador4 <= contador2 + 1; contador4++ ) {
+                                    if ( bosque[ contador3 ][ contador4 ] != 1 ) {
+                                        bosque[ contador3 ][ contador4 ] = 7;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -70,10 +132,14 @@ public class AceptaElReto_207 {
             
             for ( int[] x : bosque ) {
                 for ( int y : x ) {
-                System.out.print( y + " " );
+//                System.out.print( y + " " );
+                    if ( y == 7 ) {
+                       totalSombra++; 
+                    }
                 }
-                System.out.println( "" );
+//               System.out.println( "" );
             }
+            System.out.println( totalSombra );
         }
 
     } // fin de main
