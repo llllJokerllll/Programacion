@@ -24,7 +24,7 @@ public class AceptaElReto_171 {
         // Salida de datos
         int abadias;
         // Operativa
-        int contador1, contador2;
+        int contador1;
         // Constantes
         // Inicialización
         // Creación de objetos
@@ -40,14 +40,14 @@ public class AceptaElReto_171 {
             for ( contador1 = 0; contador1 < casos; contador1++ ) {
                 cordillera[ contador1 ] = entrada.nextInt();
             }
-            for ( contador1 = 0; contador1 < casos; contador1++ ) {
-                for ( contador2 = contador1 + 1; contador2 < casos; contador2++ ) {
-                    if ( cordillera[ contador1 ] <= cordillera[ contador2 ] ) {
-                        break;
-                    } else if ( contador2 == casos - 1 ) {
-                        abadias++;
-                    }
+            
+            int aux = cordillera[ casos - 1 ];
+            for ( contador1 = casos - 2; contador1 >= 0; contador1-- ) {
+                if ( cordillera[ contador1 ] > aux ) {                 
+                    abadias++;
+                    aux = cordillera[ contador1 ];
                 }
+                
             }
             System.out.println( abadias );
         }
