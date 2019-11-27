@@ -14,13 +14,19 @@
 // colocadas en orden inverso, as palabras ordenadas da a á z e as palabras ordenadas da z á a.
 
 // Importación de librerías
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Scanner;
 import java.util.Arrays;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
 
 public class MaisdeStrings_17_JMS {
 
     public static void main( String[] args ) {
-        
+        init();
         // Declaración de variables
         // Entrada de datos
         String texto;
@@ -63,5 +69,50 @@ public class MaisdeStrings_17_JMS {
         
     } // fin de main
     
+    static void init() {
+        JFrame ventana;
+        ventana = new JFrame();
+        ventana.setBounds( 100, 100, 600, 500 );
+        ventana.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+        ventana.setTitle( "Titulo de la ventana" );
+        ventana.getContentPane().setLayout( null );
+        
+        JTextField campoTexto = new JTextField();
+        campoTexto.setBounds( 150, 30, 400, 25 );
+        
+        JLabel etiquetaTexto = new JLabel();
+        etiquetaTexto.setText( "Frase" );
+        etiquetaTexto.setBounds( 20, 30, 150, 25 );
+        
+        JButton botonEnviar = new JButton("Enviar");
+        botonEnviar.setBounds( 140, 400, 90, 25 );
+        JButton botonLimpiar = new JButton("Limpiar");
+        botonLimpiar.setBounds( 20, 400, 90, 25);
+        
+        JLabel numPalabras = new JLabel( "Número de palabras: " );
+        numPalabras.setBounds( 20, 60, 500, 25 );
+        
+        ventana.getContentPane().add( campoTexto );
+        ventana.getContentPane().add( etiquetaTexto );
+        ventana.getContentPane().add( numPalabras );
+        ventana.getContentPane().add( botonEnviar );
+        ventana.getContentPane().add( botonLimpiar );
+        
+        ventana.setVisible( true );
+        
+        // Acciones
+        botonLimpiar.addActionListener( new ActionListener() {
+            public void actionPerformed( ActionEvent e ){
+                campoTexto.setText( "" );
+            }
+        });
+        
+        botonEnviar.addActionListener( new ActionListener() {
+            public void actionPerformed( ActionEvent e ){
+                String[] palabras = campoTexto.getText().split( " " );
+                numPalabras.setText( numPalabras.getText() + " " + numPalabras( palabras ));
+            }
+        });
+    }
 } // fin de la clase MaisdeStrings_17_JMS
 

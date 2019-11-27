@@ -26,17 +26,17 @@ public class AceptaElReto_207 {
         int contador1, contador2, contador3, contador4;
         // Constantes
         // Inicialización
-        totalSombra = 0;
         // Creación de objetos
         Scanner entrada = new Scanner( System.in );
         
         // Entrada de datos, resolución del programa y salida de datos
         while ( true ) {
-            ancho = entrada.nextInt();
             alto = entrada.nextInt();
+            ancho = entrada.nextInt();
             nArboles = entrada.nextInt();
             if ( alto == 0 && ancho == 0 && nArboles == 0 ) break;
             int[][] bosque = new int[ alto ][ ancho ];
+            totalSombra = 0;
             
             for ( contador1 = 1; contador1 <= nArboles; contador1++ ) {
                 bosque[ entrada.nextInt() - 1 ][ entrada.nextInt() - 1 ] = 1;
@@ -132,12 +132,12 @@ public class AceptaElReto_207 {
             
             for ( int[] x : bosque ) {
                 for ( int y : x ) {
-//                System.out.print( y + " " );
+                System.out.print( y + " " );
                     if ( y == 7 ) {
                        totalSombra++; 
                     }
                 }
-//               System.out.println( "" );
+               System.out.println( "" );
             }
             System.out.println( totalSombra );
         }
