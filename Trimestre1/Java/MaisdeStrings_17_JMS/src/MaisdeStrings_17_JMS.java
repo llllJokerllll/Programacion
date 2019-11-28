@@ -110,7 +110,7 @@ public class MaisdeStrings_17_JMS {
         botonEnviar.addActionListener( new ActionListener() {
             public void actionPerformed( ActionEvent e ){
                 String[] palabras = campoTexto.getText().split( " " );
-                numPalabras.setText( numPalabras.getText() + " " + numPalabras( palabras ));
+                //numPalabras.setText( numPalabras.getText() + " " + numPalabras( palabras ));
             }
         });
     }

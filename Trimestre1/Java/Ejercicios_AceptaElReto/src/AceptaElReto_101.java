@@ -61,20 +61,8 @@ public class AceptaElReto_101 {
                         }
                     }
                 }
-//                for ( int[] x : cuadrado ) {
-//                    for ( int y : x ) {
-//                        System.out.print( y  + " " );
-//                    }
-//                    System.out.println( "" );
-//                }
-//                System.out.println( sumaDiag1 );
-//                System.out.println( sumaDiag2 );
-//                System.out.println( sumaHoriz );
-//                System.out.println( sumaVertical );
-                
                 if ( sumaDiag1 == sumaVertical && sumaDiag1 == sumaHoriz && sumaDiag1 == sumaDiag2 ) {
-                    cm2 = 4 * sumaHoriz / tLados;
-//                    System.out.println( cm2 );
+                    cm2 = cuadrado[ 0 ][ 0 ] + cuadrado[ 0 ][ tLados - 1 ] + cuadrado[ tLados - 1 ][ 0 ] + cuadrado[ tLados - 1 ][ tLados - 1 ];
                     if ( numMax <= tLados * tLados && cuadrado[ mitadCuadrado ][ mitadCuadrado ] * 4 == cm2 && cuadrado[ 0 ][ mitadCuadrado ] + cuadrado[ mitadCuadrado ][ 0 ] + cuadrado[ tLados - 1 ][ mitadCuadrado ] + cuadrado[ mitadCuadrado ][ tLados - 1 ] == cm2 && cuadrado[ 0 ][ 0 ] + cuadrado[ 0 ][ tLados - 1 ] + cuadrado[ tLados - 1 ][ 0 ] + cuadrado[ tLados - 1 ][ tLados - 1 ] == cm2 ) {
                         System.out.println( "ESOTERICO" );
                     } else {
@@ -107,19 +95,8 @@ public class AceptaElReto_101 {
                         }
                     }
                 }
-//                for ( int[] x : cuadrado ) {
-//                    for ( int y : x ) {
-//                        System.out.print( y  + " " );
-//                    }
-//                    System.out.println( "" );
-//                }
-//                System.out.println( sumaDiag1 );
-//                System.out.println( sumaDiag2 );
-//                System.out.println( sumaHoriz );
-//                System.out.println( sumaVertical );
                 if ( sumaDiag1 == sumaVertical && sumaDiag1 == sumaHoriz && sumaDiag1 == sumaDiag2 ) {
-                    cm2 = cuadrado[ mitadCuadrado ][ mitadCuadrado ] + cuadrado[ mitadCuadrado ][ mitadCuadrado2 ] + cuadrado[ mitadCuadrado2 ][ mitadCuadrado ] + cuadrado[ mitadCuadrado2 ][ mitadCuadrado2 ];
-//                    System.out.println( cm2 );
+                    cm2 = cuadrado[ 0 ][ 0 ] + cuadrado[ 0 ][ tLados - 1 ] + cuadrado[ tLados - 1 ][ 0 ] + cuadrado[ tLados - 1 ][ tLados - 1 ];
                     if ( numMax <= tLados * tLados && cuadrado[ 0 ][ mitadCuadrado ] + cuadrado[ mitadCuadrado ][ 0 ] + cuadrado[ 0 ][ mitadCuadrado2 ] + cuadrado[ mitadCuadrado2 ][ 0 ] + cuadrado[ tLados - 1 ][ mitadCuadrado ] + cuadrado[ mitadCuadrado ][ tLados - 1 ] + cuadrado[ tLados - 1 ][ mitadCuadrado2 ] + cuadrado[ mitadCuadrado2 ][ tLados - 1 ] == cm2 * 2 && cuadrado[ 0 ][ 0 ] + cuadrado[ 0 ][ tLados - 1 ] + cuadrado[ tLados - 1 ][ 0 ] + cuadrado[ tLados - 1 ][ tLados - 1 ] == cm2 ) {
                         System.out.println( "ESOTERICO" );
                     } else {

@@ -30,11 +30,11 @@ public class AceptaElReto_207 {
         Scanner entrada = new Scanner( System.in );
         
         // Entrada de datos, resolución del programa y salida de datos
-        while ( true ) {
-            alto = entrada.nextInt();
-            ancho = entrada.nextInt();
-            nArboles = entrada.nextInt();
-            if ( alto == 0 && ancho == 0 && nArboles == 0 ) break;
+        alto = entrada.nextInt();
+        ancho = entrada.nextInt();
+        nArboles = entrada.nextInt();
+        
+        while ( alto != 0 && ancho != 0 && nArboles != 0 ) {
             int[][] bosque = new int[ alto ][ ancho ];
             totalSombra = 0;
             
@@ -140,6 +140,9 @@ public class AceptaElReto_207 {
                System.out.println( "" );
             }
             System.out.println( totalSombra );
+            alto = entrada.nextInt();
+            ancho = entrada.nextInt();
+            nArboles = entrada.nextInt();
         }
 
     } // fin de main
