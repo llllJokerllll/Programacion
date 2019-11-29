@@ -12,7 +12,7 @@
 // Importación de librerías
 import java.util.Scanner;
 
-public class AceptaElreto_176 {
+public class AceptaElReto_176 {
 
     public static void main( String[] args ) {
 
@@ -23,7 +23,8 @@ public class AceptaElreto_176 {
         int resultado;
         // Operativa
         int contador1, contador2, contador3, contador4;
-        int aux;
+        int aux; 
+        String linea;
         // Constantes
         // Inicialización        
         // Creación de 
@@ -36,95 +37,24 @@ public class AceptaElreto_176 {
             if ( alto == 0 || ancho == 0 ) {
                 break;
             }
-            String[][] minas = new String[ alto ][ ancho ];
+            entrada.nextLine();
+            char[][] minas = new char[ alto ][ ancho ];
             resultado = 0;
 
             for ( contador1 = 0; contador1 < alto; contador1++ ) {
+                linea = entrada.nextLine();
                 for ( contador2 = 0; contador2 < ancho; contador2++ ) {
-                    minas[ contador1 ][ contador2 ] = entrada.next();
+                    minas[ contador1 ][ contador2 ] = linea.charAt( contador2 );
                 }
-            }
-
+            }            
             for ( contador1 = 0; contador1 < alto; contador1++ ) {
                 for ( contador2 = 0; contador2 < ancho; contador2++ ) {
-                    if ( "_".equals( minas[ contador1 ][ contador2 ] ) ) {
+                    if ( '-' == minas[ contador1 ][ contador2 ] ) {
                         aux = 0;
-                        if ( contador1 == 0 && contador2 == 0 ) {
-                            if ( "*".equals( minas[ 0 ][ 1 ] ) ) {
-                                aux++;
-                            }
-                            if ( "*".equals( minas[ 1 ][ 0 ] ) ) {
-                                aux++;
-                            }
-                            if ( "*".equals( minas[ 1 ][ 1 ] ) ) {
-                                aux++;
-                            }
-                        } else if ( contador1 == 0 && contador2 == ancho - 1 ) {
-                            if ( "*".equals( minas[ 0 ][ ancho - 2 ] ) ) {
-                                aux++;
-                            }
-                            if ( "*".equals( minas[ 1 ][ ancho - 1 ] ) ) {
-                                aux++;
-                            }
-                            if ( "*".equals( minas[ 1 ][ ancho - 2 ] ) ) {
-                                aux++;
-                            }
-                        } else if ( contador1 == alto - 1 && contador2 == 0 ) {
-                            if ( "*".equals( minas[ alto - 1 ][ 1 ] ) ) {
-                                aux++;
-                            }
-                            if ( "*".equals( minas[ alto - 2 ][ 0 ] ) ) {
-                                aux++;
-                            }
-                            if ( "*".equals( minas[ alto - 2 ][ 1 ] ) ) {
-                                aux++;
-                            }
-                        } else if ( contador1 == alto - 1 && contador2 == ancho - 1 ) {
-                            if ( "*".equals( minas[ alto - 1 ][ ancho - 2 ] ) ) {
-                                aux++;
-                            }
-                            if ( "*".equals( minas[ alto - 2 ][ ancho - 1 ] ) ) {
-                                aux++;
-                            }
-                            if ( "*".equals( minas[ alto - 2 ][ ancho - 2 ] ) ) {
-                                aux++;
-                            }
-                        } else if ( contador1 == 0 && contador2 > 0 && contador2 < ancho - 1 ) {
-                            for ( contador3 = 0; contador3 <= 1; contador3++ ) {
-                                for ( contador4 = contador2 - 1; contador4 <= contador2 + 1; contador4++ ) {
-                                    if ( "*".equals( minas[ contador3 ][ contador4 ] ) ) {
-                                        aux++;
-                                    }
-                                }
-                            }
-                        } else if ( contador2 == 0 && contador1 > 0 && contador1 < alto - 1 ) {
-                            for ( contador3 = 0; contador3 <= 1; contador3++ ) {
-                                for ( contador4 = contador1 - 1; contador4 <= contador1 + 1; contador4++ ) {
-                                    if ( "*".equals( minas[ contador3 ][ contador4 ] ) ) {
-                                        aux++;
-                                    }
-                                }
-                            }
-                        } else if ( contador1 == alto - 1 && contador2 > 0 && contador2 < ancho - 1 ) {
-                            for ( contador3 = alto - 1; contador3 >= alto - 2; contador3-- ) {
-                                for ( contador4 = contador2 - 1; contador4 <= contador2 + 1; contador4++ ) {
-                                    if ( "*".equals( minas[ contador3 ][ contador4 ] ) ) {
-                                        aux++;
-                                    }
-                                }
-                            }
-                        } else if ( contador2 == ancho - 1 && contador1 > 0 && contador1 < alto - 1 ) {
-                            for ( contador3 = ancho - 1; contador3 >= ancho - 2; contador3-- ) {
-                                for ( contador4 = contador1 - 1; contador4 <= contador1 + 1; contador4++ ) {
-                                    if ( "*".equals( minas[ contador3 ][ contador4 ] ) ) {
-                                        aux++;
-                                    }
-                                }
-                            }
-                        } else {
+                        if ( contador1 > 0 && contador1 < alto - 1 && contador2 > 0 && contador2 < ancho - 1 ) {
                             for ( contador3 = contador1 - 1; contador3 <= contador1 + 1; contador3++ ) {
                                 for ( contador4 = contador2 - 1; contador4 <= contador2 + 1; contador4++ ) {
-                                    if ( "*".equals( minas[ contador3 ][ contador4 ] ) ) {
+                                    if ( '*' == minas[ contador3 ][ contador4 ] ) {
                                         aux++;
                                     }
                                 }
@@ -142,5 +72,5 @@ public class AceptaElreto_176 {
 
     } // fin de main
 
-} // fin de la clase AceptaElreto_176
+} // fin de la clase AceptaElReto_176
 
