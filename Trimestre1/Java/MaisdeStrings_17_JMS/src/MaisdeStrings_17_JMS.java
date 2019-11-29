@@ -62,12 +62,53 @@ public class MaisdeStrings_17_JMS {
         System.out.println( "El número de palabras es: " + textoVector.length );
         System.out.println( "La primera palabra es: " + textoVector[ 0 ] );
         System.out.println( "La última palabra es: " + textoVector[ textoVector.length - 1 ] );
-        System.out.println( "Las palabras ordenadas del reves es: " + textoReves );
+        System.out.println( "Las palabras del reves es: " + textoReves );
         System.out.println( "Las palabras ordenadas de la a, a la z son: " + textoOrdenado );
         System.out.println( "Las palabras ordenadas de la z, a la a son: " + textoOrdRev );
         
         
     } // fin de main
+    
+    public static int contarPalabras ( String[] m ) {
+        
+        return m.length;
+    }
+    
+    public static String primeraPalabra ( String[] m ) {
+        
+        return m[ 0 ];
+    }
+    
+    public static String ultimaPalabra ( String[] m ) {
+        
+        return m[ m.length - 1 ];
+    }
+    
+    public static StringBuilder palabrasReves ( String[] m ) {
+        StringBuilder pReves = new StringBuilder();
+        for ( int i = m.length - 1; i >= 0; i-- ) {
+            pReves.append( m[ i ] + " " );
+        }
+        return pReves;
+    }
+    
+    public static StringBuilder palabrasOrdenadas ( String[] m ) {
+        StringBuilder pOrdenadas = new StringBuilder();
+        Arrays.sort( m );
+        for ( String x : m ) {
+            pOrdenadas.append( x + " " );
+        }
+        return pOrdenadas;
+    }
+    
+    public static StringBuilder palabrasOrdendasReves ( String[] m ) {
+        StringBuilder pOrdReves = new StringBuilder();
+        Arrays.sort( m );
+        for ( int i = m.length - 1; i >= 0; i-- ) {
+            pOrdReves.append( m[ i ] + " " );
+        }
+        return pOrdReves;
+    }
     
     static void init() {
         JFrame ventana;
@@ -89,12 +130,27 @@ public class MaisdeStrings_17_JMS {
         JButton botonLimpiar = new JButton("Limpiar");
         botonLimpiar.setBounds( 20, 400, 90, 25);
         
-        JLabel numPalabras = new JLabel( "Número de palabras: " );
+        JLabel numPalabras = new JLabel( "El número de palabras es: " );
         numPalabras.setBounds( 20, 60, 500, 25 );
+        JLabel primerPalabra = new JLabel( "La primera palabra es: " );
+        primerPalabra.setBounds( 20, 90, 500, 25 );
+        JLabel ultPalabra = new JLabel( "La última palabra es: " );
+        ultPalabra.setBounds( 20, 120, 500, 25 );
+        JLabel revesPalabras = new JLabel( "Las palabras del reves es: " );
+        revesPalabras.setBounds( 20, 150, 500, 25 );
+        JLabel ordPalabras = new JLabel( "Las palabras ordenadas de la a, a la z son: " );
+        ordPalabras.setBounds( 20, 180, 500, 25 );
+        JLabel ordRevPalabras = new JLabel( "Las palabras ordenadas de la z, a la a son: " );
+        ordRevPalabras.setBounds( 20, 210, 500, 25 );
         
         ventana.getContentPane().add( campoTexto );
         ventana.getContentPane().add( etiquetaTexto );
         ventana.getContentPane().add( numPalabras );
+        ventana.getContentPane().add( primerPalabra );
+        ventana.getContentPane().add( ultPalabra );
+        ventana.getContentPane().add( revesPalabras );
+        ventana.getContentPane().add( ordPalabras );
+        ventana.getContentPane().add( ordRevPalabras );
         ventana.getContentPane().add( botonEnviar );
         ventana.getContentPane().add( botonLimpiar );
         
@@ -104,14 +160,26 @@ public class MaisdeStrings_17_JMS {
         botonLimpiar.addActionListener( new ActionListener() {
             public void actionPerformed( ActionEvent e ){
                 campoTexto.setText( "" );
+                numPalabras.setText( "El número de palabras es: " );
+                primerPalabra.setText( "La primera palabra es: " );
+                ultPalabra.setText( "La última palabra es: " );
+                revesPalabras.setText( "Las palabras del reves es: " );
+                ordPalabras.setText( "Las palabras ordenadas de la a, a la z son: " );
+                ordRevPalabras.setText( "Las palabras ordenadas de la z, a la a son: " );
             }
         });
         
         botonEnviar.addActionListener( new ActionListener() {
             public void actionPerformed( ActionEvent e ){
                 String[] palabras = campoTexto.getText().split( " " );
-                //numPalabras.setText( numPalabras.getText() + " " + numPalabras( palabras ));
+                numPalabras.setText( numPalabras.getText() + " " + contarPalabras( palabras ));
+                primerPalabra.setText( primerPalabra.getText() + " " + primeraPalabra( palabras ));
+                ultPalabra.setText( ultPalabra.getText() + " " + ultimaPalabra( palabras ));
+                revesPalabras.setText( revesPalabras.getText() + " " + palabrasReves( palabras ));
+                ordPalabras.setText( ordPalabras.getText() + " " + palabrasOrdenadas( palabras ));
+                ordRevPalabras.setText( ordRevPalabras.getText() + " " + palabrasOrdendasReves( palabras ));
             }
+            
         });
     }
 } // fin de la clase MaisdeStrings_17_JMS
