@@ -9,12 +9,16 @@
  * Título: Ejercicio 
  * @version 1.0
  */
-// Cadea baleira
+// Nun programiña recolle un texto inserido polo usuario e comproba se este texto valida as
+// seguintes expresións regulares. Debes implementar unha única clase chamada Regex1, e
+// por cada expresión regular implementar unha función/método/procedemento á que
+// invocarás coa frase en cuestión. Dálle nomes alusivos aos métodos.
+
 
 // Importación de librerías
 import java.util.Scanner;
 
-public class ER_1_A {
+public class Regex1 {
 
     public static void main( String[] args ) {
         
@@ -130,5 +134,5 @@ public class ER_1_A {
         return n.matches( patron );
     }
     
-} // fin de la clase ER_1_A
+} // fin de la clase Regex1
 
