@@ -46,8 +46,7 @@ public class Regex2 {
         
         String patron1 = "\\s{2,}";
         String patron2 = "^\\s|\\s$";
-        n = n.replaceAll( patron1, " " );
-        n = n.replaceAll( patron2, "" );
+        n = n.replaceAll( patron1, " " ).replaceAll( patron2, "" );
         
         return n;
     }

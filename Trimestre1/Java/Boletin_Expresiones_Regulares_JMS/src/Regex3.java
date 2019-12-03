@@ -13,6 +13,12 @@
 // usuario no que se esqueceu de engadir un espazo en branco despois dos puntos e das
 // comas. Debes aplicar expresións regulares para solventar o desaguisado.
 // Un texto de exemplo podería ser este:
+//Lorem ipsum dolor sit amet,consectetur adipiscing elit.Pellentesque mattis tristique accumsan.Cras volutpat porta ex vel
+//hendrerit.Suspendisse non elementum eros.Proin mattis hendrerit blandit.Fusce mattis dui in tempor condimentum.In lectus
+//justo,venenatis eget lacus in,scelerisque posuere ante.Aenean commodo leo eget ornare condimentum.Ut tempor ligula
+//diam,finibus consectetur lectus blandit faucibus.Sed at enim id lectus vehicula pulvinar sit amet eu ipsum.In hac habitasse
+//platea dictumst.Pellentesque ex erat,rutrum elementum nisl eleifend,feugiat aliquam odio.Proin nibh sem,malesuada a porta
+//at,posuere sit amet felis.
 
 // Importación de librerías
 import java.util.Scanner;
@@ -52,8 +58,7 @@ public class Regex3 {
         
         String patron = "[.]";
         String patron2 = "[,]";
-        n = n.replaceAll( patron, ". " );
-        n = n.replaceAll( patron2, ", ");
+        n = n.replaceAll( patron, ". " ).replaceAll( patron2, ", ");
         
         return n;
     }
