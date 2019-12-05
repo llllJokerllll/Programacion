@@ -1,3 +1,8 @@
+/* 
+ * Documento creado no 2019 por DAWDU10
+ * CIFP A Carballeira. Proyecto Prueba 
+ * Contenido con licencia Creative Commons CC BY-NC-SA.
+ */
 package prueba;
 
 public class Prueba {
