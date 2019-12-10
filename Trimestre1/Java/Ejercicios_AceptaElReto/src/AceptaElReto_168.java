@@ -24,7 +24,7 @@ public class AceptaElReto_168 {
         // Salida de datos
         int resultado;
         // Operativa
-        int contador1, contador2;
+        int contador1;
         // Constantes
         // Inicialización        
         // Creación de objetos
@@ -35,21 +35,21 @@ public class AceptaElReto_168 {
         
         while ( casos != 0 ) {
             int[] puzzle = new int[ casos - 1 ];
-            contador2 = 1;
+            resultado = 1;
             for ( contador1 = 0; contador1 < casos - 1; contador1++ ) {
                 puzzle[ contador1 ] = entrada.nextInt();
             }
             
             Arrays.sort( puzzle );
             for ( contador1 = 0; contador1 < casos - 1; contador1++ ) {
-                    if ( puzzle[ contador1 ] == contador2 ) {
-                        contador2++;
+                    if ( puzzle[ contador1 ] == resultado ) {
+                        resultado++;
                         continue;
                     } else {
                         break;
                     }
                 }
-            System.out.println( contador2 );
+            System.out.println( resultado );
             casos = entrada.nextInt();
         }
 
