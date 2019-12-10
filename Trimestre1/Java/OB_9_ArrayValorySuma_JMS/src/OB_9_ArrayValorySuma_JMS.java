@@ -15,39 +15,67 @@ public class OB_9_ArrayValorySuma_JMS {
         
         // Declaración de variables
         // Entrada de datos
-        int[][] matriz = new int[ 10 ][ 10 ];
+        int f, c;
         // Salida de datos
+        int[][] matriz;
         // Operativa
-        Scanner entrada = new Scanner( System.in );
-        int contador1, contador2, suma;
+        int suma;
         // Constantes
         // Inicialización
-        suma = 0;
+        f = c = 3;
         
         // Entrada de datos y resolución del programa
-        for ( contador1 = 0; contador1 < matriz.length; contador1++ ) {
-            for( contador2 = 0; contador2 < matriz[ contador1 ].length; contador2 ++ ) {
-                System.out.println( "Por favor, introduzca un valor" );
-                matriz[ contador1 ][ contador2 ] = entrada.nextInt();
-                suma += matriz[ contador1 ][ contador2 ];
+        matriz = crearMatriz( f, c );
+        imprimirResultado( matriz );
+        matriz = matrizAcumulada( matriz, sumaMatriz( matriz ) );
+        imprimirResultado( matriz );
+
+
+    } // fin de main
+    
+    static int[][] crearMatriz( int f, int c ) {
+        
+        int[][] matriz = new int[ f ][ c ];
+        Scanner entrada = new Scanner( System.in );
+        
+        for ( int i = 0; i < matriz.length; i++ ) {
+            for( int j = 0; j < matriz[ i ].length; j ++ ) {
+                matriz[ i ][ j ] = entrada.nextInt();
             }
         }
+        return matriz;
+    }
+    
+    static int sumaMatriz( int[][] matriz ) {
         
-        for ( contador1 = 0; contador1 < matriz.length; contador1++ ) {
-            for( contador2 = 0; contador2 < matriz[ contador1 ].length; contador2 ++ ) {
-                matriz[ contador1 ][ contador2 ] += suma; 
+        int acum = 0;
+        for ( int[] x : matriz ) {
+            for ( int y : x ) {
+                acum += y;
             }
         }
+        return acum;
+    }
+    
+    static int[][] matrizAcumulada( int[][] matriz, int acum ) {
         
-        // Salida de datos
+        for ( int i = 0; i < matriz.length; i++ ) {
+            for( int j = 0; j < matriz[ i ].length; j ++ ) {
+                matriz[ i ][ j ] += acum;
+            }
+        }
+        return matriz;
+    }
+    
+    static void imprimirResultado( int[][] matriz ) {
+        
         for ( int[] x : matriz ) {
             for ( int y : x ) {
             System.out.print( y + " " );    
             }
             System.out.println( "" );
         }
-
-    } // fin de main
+    }
     
 } // fin de la clase OB_9_ArrayValorySuma_JMS
 
