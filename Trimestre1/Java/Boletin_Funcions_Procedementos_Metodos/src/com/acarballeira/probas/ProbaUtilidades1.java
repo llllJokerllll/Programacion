@@ -18,6 +18,7 @@ package com.acarballeira.probas;
 
 // Importación de librerías
 import static com.acarballeira.Utilidades.*;
+import java.util.Arrays;
 
 public class ProbaUtilidades1 {
 
@@ -33,9 +34,9 @@ public class ProbaUtilidades1 {
         System.out.println( suma( 4, 5, 6 ) );
         System.out.println( max( 9, 5 ) );
         System.out.println( min( 9, 5 ) );
-        System.out.println( mcd( 9, 15) );
+        System.out.println( mcd( 2310, 98 ) );
         System.out.println( mcm( 12, 18 ) );
-        System.out.println( diasMes( 9, 1988 ) );
+        System.out.println( Arrays.toString( diasMes( 9, 1988 ) ) );
         diasTranscurridos1980( 10, 12, 2019 );
         diasEntreFechas( 1, 1, 1980, 9, 3, 1988 );
         horaASegundos( 15, 15, 15 );

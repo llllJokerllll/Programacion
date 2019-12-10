@@ -91,6 +91,76 @@ public class Mates {
         System.out.println( "El resultado usando StringBuilder es: " + volteaL );
     }
     
+    /**
+     * 
+     * @param digito
+     * @param num
+     * @return 
+     */
+    public static int posicionDeDigito( int digito, int num ) {
+        
+        String numString = Integer.toString( num );
+        String digitoString = Integer.toString( digito );
+        
+        return numString.indexOf( digitoString );
+    }
+    
+    /**
+     * 
+     * @param digitos
+     * @param num 
+     */
+    public static void quitaPorDetras( int digitos, int num ) {
+        
+        String numString = Integer.toString( num );
+        
+        System.out.println( "El resultado usando String es: " + numString.substring( 0, numString.length() - digitos ) );
+        
+        int numero = num;
+        for ( int i = 0; i < digitos; i++ ) {
+            numero /= 10;
+        }
+        System.out.println( "El resultado usando Numeros es: " + numero );
+    }
+    
+    /**
+     * 
+     * @param digitos
+     * @param num 
+     */
+    public static void quitaPorDelante( int digitos, int num ) {
+        
+        String numString = Integer.toString( num );
+        
+        System.out.println( "El resultado usando String es: " + numString.substring( digitos, numString.length() ) );   
+    }
+    
+    /**
+     * 
+     * @param digito
+     * @param num
+     * @return 
+     */
+    public static int pegaPorDetras( int digito, int num ) {
+        
+        return num * 10 + digito;
+    }
+    
+    /**
+     * 
+     * @param digito
+     * @param num
+     * @return 
+     */
+    public static int pegaPorDelante( int digito, int num ) {
+        
+        String numString = Integer.toString( num );
+        return digito * ( int ) Math.pow( 10, numString.length() ) + num;
+    }
+    
+    public static final double E = 2.7182818284590452354;
+    public static final double PI = 3.14159265358979323846;
+
     
 } // fin de la clase Mates
 

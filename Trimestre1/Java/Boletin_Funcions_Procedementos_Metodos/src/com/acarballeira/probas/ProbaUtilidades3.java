@@ -18,16 +18,22 @@ package com.acarballeira.probas;
 // com.acarballeira.probas.
 
 // Importación de librerías
-import com.acarballeira.Mates;
+import static com.acarballeira.Mates.*;
 
 public class ProbaUtilidades3 {
 
     public static void main( String[] args ) {
         
-        System.out.println( Mates.esPrimo( 3 ) );
-        System.out.println( Mates.siguientePrimo( 3 ) );
-        System.out.println( Mates.digitos( 6969 ) );
-        Mates.voltea( 9031988 );
+        System.out.println( esPrimo( 3 ) );
+        System.out.println( siguientePrimo( 3 ) );
+        System.out.println( digitos( 6969 ) );
+        voltea( 9031988 );
+        System.out.println( posicionDeDigito( 9, 845168964 ) );
+        quitaPorDetras( 2, 5646153 );
+        quitaPorDelante( 2, 5646153 );
+        System.out.println( pegaPorDelante( 9, 159 ) );
+        System.out.println("Pi es " + Math.PI);     
+        System.out.println("E es " + Math.E);
 
 
     } // fin de main

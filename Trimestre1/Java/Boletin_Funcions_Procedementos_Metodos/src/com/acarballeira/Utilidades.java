@@ -10,7 +10,10 @@ package com.acarballeira;
  * Título: Métodos dentro del paquete
  * @version 1.0
  */
+
 // Importación de librerias
+import java.util.Arrays;
+
 public class Utilidades {
 
     /**
@@ -134,6 +137,7 @@ public class Utilidades {
      * @return
      */
     public static int mcd( int num1, int num2 ) {
+        
         if ( num2 == 0 ) {
             return num1;
         } else {
@@ -158,12 +162,14 @@ public class Utilidades {
      * @param ano
      * @return
      */
-    public static String diasMes( int mes, int ano ) {
+    public static String[] diasMes( int mes, int ano ) {
 
         String[][] matriz = { { "31", "28", "31", "30", "31", "30", "31", "31", "30", "31", "30", "31" },
         { "Xaneiro", "Febreiro", "Marzo", "Abril", "Mayo", "Xuño", "Xullo", "Agosto", "Setembro", "Outubro", "Novembro", "Decembro" } };
 
-        return ( bisiesto( ano ) && mes == 2 ? "29 Febreiro" : matriz[ 0 ][ mes - 1 ] + " " + matriz[ 1 ][ mes - 1 ] );
+        String[] resultado1 = { "29", "Febreiro" };
+        String[] resultado2 = { matriz[ 0 ][ mes - 1 ], matriz[ 1 ][ mes - 1 ] };
+        return ( bisiesto( ano ) && mes == 2 ? resultado1 : resultado2 );
     }
 
     /**
