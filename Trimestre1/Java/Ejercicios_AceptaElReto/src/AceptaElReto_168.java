@@ -44,7 +44,6 @@ public class AceptaElReto_168 {
             for ( contador1 = 0; contador1 < casos - 1; contador1++ ) {
                     if ( puzzle[ contador1 ] == resultado ) {
                         resultado++;
-                        continue;
                     } else {
                         break;
                     }
