@@ -16,38 +16,47 @@ public class OB_10_CuadradoLatinoOrden10_JMS {
         
         // Declaración de variables
         // Entrada de datos
-        int[][] cuadradoLatino = new int[ 10 ][ 10 ];
         // Salida de datos
+        int[][] cuadradoLatino;
         // Operativa
-        int contador1, contador2, aux, aux2;
+        int f, c;
         // Constantes
         // Inicialización
-        aux = 1;
-        
+        f = c = 10;
         // Entrada de datos y resolución del programa
-        for ( contador1 = 0; contador1 < cuadradoLatino.length; contador1++ ) {
-            for ( contador2 = 0; contador2 < cuadradoLatino[ contador1 ].length; contador2++ ) {
-                if ( contador2 == 0 ) {
-                cuadradoLatino[ contador1 ][ contador2 ] = aux;    
+        imprimir( cuadradoLatino = crearCuadradoLat( f, c ) );
+        
+
+    } // fin de main
+    
+    static int[][] crearCuadradoLat( int f, int c ) {
+        
+        int aux = 1;
+        int[][] cuadradoLatino = new int[ f ][ c ];
+        for ( int i = 0; i < cuadradoLatino.length; i++ ) {
+            for ( int j = 0; j < cuadradoLatino[ i ].length; j++ ) {
+                if ( j == 0 ) {
+                cuadradoLatino[ i ][ j ] = aux;    
                 } else {
                     aux++;
                     if ( aux == 11 ) {
                     aux = 1;                   
                     }
-                    cuadradoLatino[ contador1 ][ contador2 ] = aux;
+                    cuadradoLatino[ i ][ j ] = aux;
                 }    
             }
         }
+        return cuadradoLatino;
+    }
+    
+    static void imprimir( int[][] cuadradoLatino ) {
         
-        // Salida de datos
         for ( int[] x : cuadradoLatino ) {
             for ( int y : x ) {
                 System.out.printf( "%2d  ", y );
             }
             System.out.println( "" );
         }
-
-    } // fin de main
-    
+    }
 } // fin de la clase OB_10_CuadradoLatinoOrden10_JMS
 
