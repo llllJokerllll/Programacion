@@ -47,11 +47,10 @@ public class AceptaElReto_176 {
                     minas[ contador1 ][ contador2 ] = linea.charAt( contador2 );
                 }
             }            
-            for ( contador1 = 0; contador1 < alto; contador1++ ) {
-                for ( contador2 = 0; contador2 < ancho; contador2++ ) {
+            for ( contador1 = 1; contador1 < alto - 1; contador1++ ) {
+                for ( contador2 = 1; contador2 < ancho - 1; contador2++ ) {
                     if ( '-' == minas[ contador1 ][ contador2 ] ) {
                         aux = 0;
-                        if ( contador1 > 0 && contador1 < alto - 1 && contador2 > 0 && contador2 < ancho - 1 ) {
                             for ( contador3 = contador1 - 1; contador3 <= contador1 + 1; contador3++ ) {
                                 for ( contador4 = contador2 - 1; contador4 <= contador2 + 1; contador4++ ) {
                                     if ( '*' == minas[ contador3 ][ contador4 ] ) {
@@ -59,8 +58,6 @@ public class AceptaElReto_176 {
                                     }
                                 }
                             }
-                        }
-
                         if ( aux >= 6 ) {
                             resultado++;
                         }
