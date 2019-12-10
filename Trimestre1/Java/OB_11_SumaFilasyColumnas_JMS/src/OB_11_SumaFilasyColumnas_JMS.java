@@ -17,46 +17,68 @@ public class OB_11_SumaFilasyColumnas_JMS {
         
         // Declaración de variables
         // Entrada de datos
-        int[][] matriz = new int[ 4 ][ 5 ];
+        int[][] matriz;
         // Salida de datos
-        int sumaFila, sumaColumna, sumaColumna1, sumaColumna2, sumaColumna3, sumaColumna4;
         // Operativa
-        Random numeroAzar = new Random();
-        int contador1, contador2;
+        int f, c;
         // Constantes
         // Inicialización
-        //sumaColumna0 = sumaColumna1 = sumaColumna2 = sumaColumna3 = sumaColumna4 = 0;
+        f = 4;
+        c = 5;
         
         // Entrada de datos y resolución del programa
-        for ( contador1 = 0; contador1 < matriz.length; contador1++ ) {
-            sumaFila = 0;
-            for ( contador2 = 0; contador2 < matriz[ contador1 ].length; contador2++ ) {
-                matriz[ contador1 ][ contador2 ] = numeroAzar.nextInt(10) + 1;
-                sumaFila += matriz[ contador1 ][ contador2 ];
+        matriz = crearMatriz( f, c );
+        sumaFila( matriz );
+        sumaColumnaPar( matriz, f, c );
+        imprimir( matriz );
+
+    } // fin de main
+    
+    static int[][] crearMatriz( int f, int c ) {
+        
+        int[][] matriz = new int[ f ][ c ];
+        Random numeroAzar = new Random();
+        for ( int i = 0; i < matriz.length; i++ ) {
+            for ( int j = 0; j < matriz[ i ].length; j++ ) {
+                matriz[ i ][ j ] = numeroAzar.nextInt(10) + 1;
             }
-            System.out.println( "suma de los elementos de la fila " + contador1 + " --> " + sumaFila );
         }
+        return matriz;
+    }
+    
+    static void sumaFila( int[][] matriz ) {
         
+        int sumaFila = 0;
+        for ( int i = 0; i < matriz.length; i++ ) {
+            for ( int j = 0; j < matriz[ i ].length; j++ ) {
+                sumaFila += matriz[ i ][ j ];
+            }
+            System.out.println( "Suma de los elementos de la fila " + i + " --> " + sumaFila );
+        }
         System.out.println( "-----------------------------------------" );
-        
-        for ( contador2 = 0; contador2 < matriz[ 3 ].length; contador2++ ) {
-            sumaColumna = 0;
-            for ( contador1 = 0; contador1 < matriz.length; contador1++ ) {
-                if ( matriz[ contador1 ][ contador2 ] % 2 == 0 ) {
-                    sumaColumna += matriz[ contador1 ][ contador2 ];
+    }
+    
+    static void sumaColumnaPar( int[][] matriz , int f, int c ) {
+                
+        for ( int i = 0; i < c; i++ ) {
+            int sumaColumna = 0;
+            for ( int j = 0; j < f; j++ ) {
+                if ( matriz[ j ][ i ] % 2 == 0 ) {
+                    sumaColumna += matriz[ j ][ i ];
                 }
             }
-            System.out.printf( "suma de los elementos pares de la columna %d %s %2d\n", contador2, "-->", sumaColumna );
+            System.out.println( "Suma de los elementos pares de la columna" + i + " --> " + sumaColumna );
         }
+    }
+    
+    static void imprimir( int[][] matriz ) {
         
-        // Salida de datos
         for ( int[] x : matriz ) {
             for ( int y : x ) {
                 System.out.printf( "%2d ", y );
             }
             System.out.println( "" );
         }
-
-    } // fin de main
+    }
     
 } // fin de la clase OB_11_SumaFilasyColumnas_JMS
