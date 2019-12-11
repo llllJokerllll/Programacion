@@ -24,7 +24,8 @@ public class C_ControlDeCalidad {
         // Salida de datos
         boolean resultado;
         // Operativa
-        String[] vector = new String[ 50 ];
+        String[] vector1 = new String[ 50 ];
+        String[] vector2 = new String[ 50 ];
         int aux;
         // Constantes
         // Inicialización        
@@ -38,18 +39,17 @@ public class C_ControlDeCalidad {
             codigo = entrada.next();
             aux = 0;
             while ( !"00000000".equals( codigo ) ) {
-                vector[ aux ] = codigo.substring( 0, 4 );
+                vector1[ aux ] = codigo.substring( 0, 4 );
+                vector2[ aux ] = codigo.substring( 4, 8 );
                 aux++;
                 codigo = entrada.next();
             }
             resultado = true;
             for ( int j = 0; j < aux - 1 && resultado; j++ ) {
-                for ( int k = 0; k < 4 && resultado; k++ ) {
-                    for ( int l = 1; l < aux && resultado; l++ ) {
-                        if ( vector[ j ].charAt( k ) == vector[ l ].charAt( k ) ) {
-                            resultado = false;
-                            break;
-                        }
+                for ( int l = j + 1; l < aux && resultado; l++ ) {
+                    if ( vector1[ j ].equals( vector1[ l ] ) || vector2[ j ].equals( vector2[ l ] ) ) {
+                        resultado = false;
+                        break;
                     }
                 }
             }

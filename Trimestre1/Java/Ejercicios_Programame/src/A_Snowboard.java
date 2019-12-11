@@ -24,24 +24,23 @@ public class A_Snowboard {
         // Operativa
         String[] competidores;
         // Constantes
-        final int c = 3;
+        final int f = 3;
         // Inicialización        
         // Creación de objetos
         Scanner entrada = new Scanner( System.in );
         
         // Entrada de datos y resolución del programa
-        while ( true ) {
-            participantes = entrada.nextInt();
-            if ( participantes == 0 ) break;
+        participantes = entrada.nextInt();
+        while ( participantes != 0 ) {
             competidores = new String[ participantes ];
-            double[][] puntuaciones = new double[ c ][ participantes ];
+            double[][] puntuaciones = new double[ f ][ participantes ];
             entrada.nextLine();
             
             for ( int i = 0; i < participantes; i++ ) {
                 competidores[ i ] = entrada.nextLine();
             }
             
-            for ( int i = 0; i < c; i++ ) {
+            for ( int i = 0; i < f; i++ ) {
                 for ( int j = 0; j < participantes; j++ ) {
                     puntuaciones[ i ][ j ] = Double.parseDouble( entrada.next() );
                 }
@@ -57,9 +56,12 @@ public class A_Snowboard {
                 }
                 System.out.println( "" );
             }
+            participantes = entrada.nextInt();
+            if( participantes != 0 ) {
+                System.out.println( "" );
+            }
         }
         
-        // Salida de datos
 
 
     } // fin de main
