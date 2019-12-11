@@ -6,13 +6,10 @@
 package com.acarballeira;
 
 /**
- * @author Jose Manuel Sabarís García <Josemsabaris@gmail.com>
+ * @author Jose Manuel 
  * Título: Métodos dentro del paquete
  * @version 1.0
  */
-
-// Importación de librerias
-import java.util.Arrays;
 
 public class Utilidades {
 
@@ -137,7 +134,7 @@ public class Utilidades {
      * @return
      */
     public static int mcd( int num1, int num2 ) {
-        
+
         if ( num2 == 0 ) {
             return num1;
         } else {
@@ -204,13 +201,13 @@ public class Utilidades {
     }
 
     /**
-     * 
+     *
      * @param diaInicio
      * @param mesInicio
      * @param anoInicio
      * @param diaFinal
      * @param mesFinal
-     * @param anoFinal 
+     * @param anoFinal
      */
     public static void diasEntreFechas( int diaInicio, int mesInicio, int anoInicio, int diaFinal, int mesFinal, int anoFinal ) {
 
@@ -224,9 +221,9 @@ public class Utilidades {
                 dias += vector[ i ];
             }
             if ( bisiesto( anoInicio ) == true && mesInicio <= 2 && diaInicio < 29 ) {
-                dias += - diaInicio + 1;
+                dias += -diaInicio + 1;
             } else {
-                dias += - diaInicio;
+                dias += -diaInicio;
             }
 
             for ( int i = anoInicio + 1; i < anoFinal; i++ ) {
@@ -249,15 +246,15 @@ public class Utilidades {
             System.out.println( "Hay " + dias + " dias de diferencia" );
         }
     }
-    
+
     /**
-     * 
+     *
      * @param hora
      * @param minutos
-     * @param segundos 
+     * @param segundos
      */
     public static void horaASegundos( int hora, int minutos, int segundos ) {
-        
+
         if ( hora > 23 || hora < 0 || minutos > 59 || minutos < 0 || segundos > 59 || segundos < 0 ) {
             System.out.println( "-1" );
         } else {
@@ -265,32 +262,24 @@ public class Utilidades {
             System.out.println( "El total de segundos de la hora dada son: " + resultado + " segundos" );
         }
     }
-    
+
     /**
-     * 
+     *
      * @param hora
      * @param minutos
-     * @param segundos 
+     * @param segundos
      */
-    public static void horaBonita( int hora, int minutos, int segundos ) {
-        
+    public static String horaBonita( int hora, int minutos, int segundos ) {
+        String resultado;
         if ( hora > 23 || hora < 0 || minutos > 59 || minutos < 0 || segundos > 59 || segundos < 0 ) {
-            System.out.println( "00:00:00" );
-        } else {
-            String horaB = "", minutosB = "", segundosB = "";
-            if ( hora < 10 ) {
-                horaB = "0" + hora;
-            }
-            if ( minutos < 10 ) {
-                minutosB = "0" + minutos;
-            }
-            if ( segundos < 10 ) {
-                segundosB = "0" + segundos;
-            }
-            System.out.println( horaB + ":" + minutosB + ":" + segundosB );
+            return "00:00:00";
         }
+        resultado = ( hora < 10 ) ? "0" + hora : "" + hora;
+        resultado += ( minutos < 10 ) ? "0" + minutos : "" + minutos;
+        resultado += ( segundos < 10 ) ? "0" + segundos : "" + minutos;
+
+        return resultado;
     }
-    
-    
+
 } // fin de la clase Utilidades
 
