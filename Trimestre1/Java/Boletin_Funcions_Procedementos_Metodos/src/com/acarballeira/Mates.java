@@ -13,6 +13,7 @@ package com.acarballeira;
  */
 
 // Importación de librerías
+import java.util.Scanner;
 
 public class Mates {
 
@@ -161,6 +162,21 @@ public class Mates {
     public static final double E = 2.7182818284590452354;
     public static final double PI = 3.14159265358979323846;
 
+    /**
+     * 
+     * @return 
+     */
+    public static int numeroMaximo() {
+        
+        int aux = -999999;
+        Scanner entrada = new Scanner( System.in );
+        int num = entrada.nextInt();
+        while ( num != 0 ) {
+            aux = Utilidades.max( aux, num );
+            num = entrada.nextInt();
+        }
+        return aux;
+    }
     
 } // fin de la clase Mates
 

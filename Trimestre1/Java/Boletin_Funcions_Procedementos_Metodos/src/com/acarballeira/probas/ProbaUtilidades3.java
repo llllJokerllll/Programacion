@@ -34,6 +34,7 @@ public class ProbaUtilidades3 {
         System.out.println( pegaPorDelante( 9, 159 ) );
         System.out.println("Pi es " + Math.PI);     
         System.out.println("E es " + Math.E);
+        System.out.println( numeroMaximo() );
 
 
     } // fin de main
