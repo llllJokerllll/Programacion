@@ -101,9 +101,8 @@ public class Mates {
     public static int posicionDeDigito( int digito, int num ) {
         
         String numString = Integer.toString( num );
-        String digitoString = Integer.toString( digito );
         
-        return numString.indexOf( digitoString );
+        return numString.indexOf( Integer.toString( digito ) );
     }
     
     /**
@@ -117,11 +116,9 @@ public class Mates {
         
         System.out.println( "El resultado usando String es: " + numString.substring( 0, numString.length() - digitos ) );
         
-        int numero = num;
-        for ( int i = 0; i < digitos; i++ ) {
-            numero /= 10;
-        }
-        System.out.println( "El resultado usando Numeros es: " + numero );
+            num /= Math.pow( 10, digitos );
+      
+        System.out.println( "El resultado usando Numeros es: " + num );
     }
     
     /**
