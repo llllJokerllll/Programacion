@@ -24,6 +24,7 @@ public class E_NumerosMalvados {
         // Operativa
         String operando;
         // Constantes
+        final char BINARIO = '1';
         // Inicialización        
         // Creación de objetos
         Scanner entrada = new Scanner( System.in );
@@ -34,6 +35,17 @@ public class E_NumerosMalvados {
         for ( int i = 0; i < casos; i++ ) {
             numeros = entrada.nextInt();
             operando = Integer.toBinaryString( numeros );
+            int aux = 0;
+            for ( int j = 0; j < operando.length(); j++ ) {
+                if ( operando.charAt( j ) == BINARIO ) {
+                    aux++;
+                }
+            }
+            if ( aux % 2 == 0 ) {
+                System.out.println( "MALVADO" );
+            } else {
+                System.out.println( "NO MALVADO" );
+            }
         }
         
         // Salida de datos
