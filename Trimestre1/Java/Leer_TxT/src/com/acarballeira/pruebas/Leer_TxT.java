@@ -11,7 +11,6 @@ package com.acarballeira.pruebas;
  * Título: Ejercicio Leer_TxT
  * @version 1.0
  */
-//
 
 // Importación de librerías
 import java.util.Scanner;
