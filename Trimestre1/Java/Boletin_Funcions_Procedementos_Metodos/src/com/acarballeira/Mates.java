@@ -18,9 +18,9 @@ import java.util.Scanner;
 public class Mates {
 
     /**
-     * 
-     * @param num
-     * @return 
+     * Aquí mostramos si un número entero dado es primo o no
+     * @param num int
+     * @return Devolvemos un valor del tipo boolean.
      */
     public static boolean esPrimo( int num ) {
         
@@ -37,9 +37,9 @@ public class Mates {
     }
     
     /**
-     * 
-     * @param num
-     * @return 
+     * Aquí reutilizamos el método anterior y devolvemos el siguiente número primo que tenga el número dado.
+     * @param num int
+     * @return Devolvemos un valor del tipo entero.
      */
     public static int siguientePrimo( int num ) {
         
@@ -52,20 +52,18 @@ public class Mates {
     }
     
     /**
-     * 
-     * @param num
-     * @return 
+     * Aquí devolvemos el tamaño de dígitos que tiene un entero.
+     * @param num int
+     * @return Devolvemos un valor del tipo entero.
      */
     public static int digitos( int num ) {
         
-        String numString = Integer.toString( num );
-        
-        return numString.length();
+        return Integer.toString( num ).length();
     }
     
     /**
-     * 
-     * @param num 
+     * Aquí mostramos de 3 formas distintas como darle la vuelta a un valor de tipo entero. Métodos con StringBuilder(insert y reverse) y usando solo operaciones matemáticas.
+     * @param num int
      */
     public static void voltea( int num ) {
         
@@ -89,26 +87,24 @@ public class Mates {
             volteaL = volteaL * 10 + resto;
             numero /= 10;
         }
-        System.out.println( "El resultado usando StringBuilder es: " + volteaL );
+        System.out.println( "El resultado usando operaciones matemáticas es: " + volteaL );
     }
     
     /**
-     * 
-     * @param digito
-     * @param num
-     * @return 
+     * Aquí damos la posición de un dígito dentro de un número del tipo entero.
+     * @param digito int
+     * @param num int
+     * @return Devolvemos un valor de tipo entero.
      */
     public static int posicionDeDigito( int digito, int num ) {
         
-        String numString = Integer.toString( num );
-        
-        return numString.indexOf( Integer.toString( digito ) );
+        return Integer.toString( num ).indexOf( Integer.toString( digito ) );
     }
     
     /**
-     * 
-     * @param digitos
-     * @param num 
+     * Aquí mostramos como quitar dígitos por detrás a un número de tipo entero con dos métodos, Substring y operaciones matemáticas.
+     * @param digitos int
+     * @param num int
      */
     public static void quitaPorDetras( int digitos, int num ) {
         
@@ -122,22 +118,21 @@ public class Mates {
     }
     
     /**
-     * 
-     * @param digitos
-     * @param num 
+     * Aquí quitamos los digitos por delante de un número de tipo entero y devolvemos un valor del mismo tipo.
+     * @param digitos int
+     * @param num int
+     * @return Devolvemos un valor del tipo entero. 
      */
-    public static void quitaPorDelante( int digitos, int num ) {
-        
-        String numString = Integer.toString( num );
-        
-        System.out.println( "El resultado usando String es: " + numString.substring( digitos, numString.length() ) );   
+    public static int quitaPorDelante( int digitos, int num ) {
+                
+        return  Integer.parseInt(Integer.toString( num ).substring( digitos, Integer.toString( num ).length() ));   
     }
     
     /**
-     * 
+     * Aquí pegamos un dígito por detras de un número entero dado.
      * @param digito
      * @param num
-     * @return 
+     * @return Devolvemos un valor de tipo entero.
      */
     public static int pegaPorDetras( int digito, int num ) {
         
@@ -145,23 +140,22 @@ public class Mates {
     }
     
     /**
-     * 
+     * Aquí pegamos un dígito por delante de un número entero dado.
      * @param digito
      * @param num
-     * @return 
+     * @return Devolvemos un valor de tipo entero.
      */
     public static int pegaPorDelante( int digito, int num ) {
         
-        String numString = Integer.toString( num );
-        return digito * ( int ) Math.pow( 10, numString.length() ) + num;
+        return ( digito * ( int ) Math.pow( 10, Integer.toString( num ).length() ) + num );
     }
     
     public static final double E = 2.7182818284590452354;
     public static final double PI = 3.14159265358979323846;
 
     /**
-     * 
-     * @return 
+     * Aquí mostramos cual es el de máximo valor de una serie de valores introducidos por teclado hasta que meta un 0, eeutilizando el método max de la clase Mates.
+     * @return Devolvemos un valor de tipo entero.
      */
     public static int numeroMaximo() {
         

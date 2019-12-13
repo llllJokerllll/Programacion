@@ -10,12 +10,10 @@ package com.acarballeira.probas;
  * Título: Ejercicio Funcións/Procedementos/Métodos
  * @version 1.0
  */
-
 // Crea unha clase chamada Utilidades, dentro do paquete chamado com.acarballeira e
 // dentro dela implementa os métodos descritos na parte inferior. Para probar estes
 // métodos define unha clase chamada ProbaUtilidades1 dentro do paquete
 // com.acarballeira.probas.
-
 // Importación de librerías
 import static com.acarballeira.Utilidades.*;
 import java.util.Arrays;
@@ -23,7 +21,7 @@ import java.util.Arrays;
 public class ProbaUtilidades1 {
 
     public static void main( String[] args ) {
-        
+
         System.out.println( par( 2 ) );
         System.out.println( bisiesto( 1988 ) );
         tablaMultiplicar( 9 );
@@ -37,11 +35,11 @@ public class ProbaUtilidades1 {
         System.out.println( mcd( 2310, 98 ) );
         System.out.println( mcm( 12, 18 ) );
         System.out.println( Arrays.toString( diasMes( 3, 1988 ) ) );
-        diasTranscurridos1980( 10, 12, 2019 );
-        diasEntreFechas( 1, 1, 1980, 9, 3, 1988 );
-        horaASegundos( 15, 15, 15 );
-        horaBonita( 9, 9, 9 );
+        System.out.println( diasTranscurridos1980( 10, 12, 2019 ) );
+        System.out.println( diasEntreFechas( 1, 1, 1980, 9, 3, 1988 ) );
+        System.out.println( horaASegundos( 15, 15, 15 ) );
+        System.out.println( horaBonita( 9, 9, 9 ) );
     } // fin de main
-    
+
 } // fin de la clase ProbaUtilidades1
 

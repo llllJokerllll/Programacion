@@ -30,7 +30,7 @@ public class ProbaUtilidades3 {
         voltea( 9031988 );
         System.out.println( posicionDeDigito( 9, 845168964 ) );
         quitaPorDetras( 2, 5646153 );
-        quitaPorDelante( 2, 5646153 );
+        System.out.println( quitaPorDelante( 2, 5646153 ) );
         System.out.println( pegaPorDelante( 9, 159 ) );
         System.out.println("Pi es " + Math.PI);     
         System.out.println("E es " + Math.E);

@@ -14,9 +14,9 @@ package com.acarballeira;
 public class Utilidades {
 
     /**
-     *
-     * @param num
-     * @return
+     * Aquí comprobamos si un número entero es par.
+     * @param num int
+     * @return Devolvemos un valor boolean.
      */
     public static boolean par( int num ) {
 
@@ -24,9 +24,9 @@ public class Utilidades {
     }
 
     /**
-     *
-     * @param ano
-     * @return
+     * Aquí comprobamos si un año es bisiesto.
+     * @param ano int
+     * @return Devolvemos un valor boolean.
      */
     public static boolean bisiesto( int ano ) {
 
@@ -34,8 +34,8 @@ public class Utilidades {
     }
 
     /**
-     *
-     * @param num
+     * Aquí mostramos la tabla de multiplicar del número entero dado.
+     * @param num int
      */
     public static void tablaMultiplicar( int num ) {
 
@@ -46,9 +46,9 @@ public class Utilidades {
     }
 
     /**
-     *
-     * @param num1
-     * @param num2
+     * Aquí rehutilizamos el método Par y mostramos los números pares que hay entre dos números segun el valor de num1 y num2, ascendente o descendente.
+     * @param num1 int
+     * @param num2 int
      */
     public static void imprimeSerie( int num1, int num2 ) {
 
@@ -63,9 +63,9 @@ public class Utilidades {
     }
 
     /**
-     *
-     * @param num
-     * @return
+     * Aquí devolvemos el tipo de signo en un valor de tipo short de un un número de tipo entero dado.
+     * @param num int
+     * @return Devolvemos un valor de tipo short.
      */
     public static short signo( int num ) {
 
@@ -73,9 +73,9 @@ public class Utilidades {
     }
 
     /**
-     *
-     * @param num
-     * @return
+     * Aquí devolvemos el tipo de signo en un valor de tipo String de un un número de tipo entero dado.
+     * @param num int
+     * @return Devolvemos un valor de tipo String.
      */
     public static String signoString( int num ) {
 
@@ -83,10 +83,10 @@ public class Utilidades {
     }
 
     /**
-     *
-     * @param num1
-     * @param num2
-     * @return
+     * Aquí devolvemos un valor de tipo entero de la suma de 2 valores del tipo entero.
+     * @param num1 int
+     * @param num2 int
+     * @return Devolvemos un valor de tipo entero.
      */
     public static int suma( int num1, int num2 ) {
 
@@ -94,11 +94,11 @@ public class Utilidades {
     }
 
     /**
-     *
-     * @param num1
-     * @param num2
-     * @param num3
-     * @return
+     * Aquí reutilizamos el método anterior y sobrecargando dicho método al recibir esta vez 3 valores del tipo entero.
+     * @param num1 int
+     * @param num2 int
+     * @param num3 int
+     * @return Devolvemos un valor de tipo entero.
      */
     public static int suma( int num1, int num2, int num3 ) {
 
@@ -106,10 +106,10 @@ public class Utilidades {
     }
 
     /**
-     *
-     * @param num1
-     * @param num2
-     * @return
+     * Aquí damos el valor máximo entre 2 números del tipo entero.
+     * @param num1 int
+     * @param num2 int
+     * @return Devolvemos un valor de tipo entero.
      */
     public static int max( int num1, int num2 ) {
 
@@ -117,10 +117,10 @@ public class Utilidades {
     }
 
     /**
-     *
-     * @param num1
-     * @param num2
-     * @return
+     * Aquí damos el valor mínimo entre 2 números del tipo entero.
+     * @param num1 int
+     * @param num2 int
+     * @return Devolvemos un valor de tipo entero.
      */
     public static int min( int num1, int num2 ) {
 
@@ -128,10 +128,10 @@ public class Utilidades {
     }
 
     /**
-     *
-     * @param num1
-     * @param num2
-     * @return
+     * Aquí hacemos el máximo común divisor entre 2 números del tipo entero.
+     * @param num1 int
+     * @param num2 int
+     * @return Devolvemos un valor de tipo entero.
      */
     public static int mcd( int num1, int num2 ) {
 
@@ -143,10 +143,10 @@ public class Utilidades {
     }
 
     /**
-     *
-     * @param num1
-     * @param num2
-     * @return
+     * Aquí hacemos el mínimo común multiplo entre 2 números del tipo entero reutilizando el método MCD.
+     * @param num1 int
+     * @param num2 int
+     * @return Devolvemos un valor de tipo entero.
      */
     public static int mcm( int num1, int num2 ) {
 
@@ -154,10 +154,10 @@ public class Utilidades {
     }
 
     /**
-     *
-     * @param mes
-     * @param ano
-     * @return
+     * Aquí reutilizamos el método bisiesto para dar los días y el mes de un año.
+     * @param mes int
+     * @param ano int
+     * @return Devolvemos un vector del tipo String.
      */
     public static String[] diasMes( int mes, int ano ) {
 
@@ -170,12 +170,13 @@ public class Utilidades {
     }
 
     /**
-     *
-     * @param dia
-     * @param mes
-     * @param ano
+     * Aquí marcamos los días transcurridos desde 1980 a la fecha dada.
+     * @param dia int
+     * @param mes int
+     * @param ano int
+     * @return Devolvemos en un valor de tipo entero. 
      */
-    public static void diasTranscurridos1980( int dia, int mes, int ano ) {
+    public static int diasTranscurridos1980( int dia, int mes, int ano ) {
 
         int dias = 0;
         int[] vector = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
@@ -197,25 +198,26 @@ public class Utilidades {
             dias += 1;
         }
 
-        System.out.println( "Hay " + dias + " dias de diferencia" );
+        return dias;
     }
 
     /**
-     *
-     * @param diaInicio
-     * @param mesInicio
-     * @param anoInicio
-     * @param diaFinal
-     * @param mesFinal
-     * @param anoFinal
+     * Aquí marcamos los días transcurridos entre dos fechas que sean válidas.
+     * @param diaInicio int
+     * @param mesInicio int
+     * @param anoInicio int
+     * @param diaFinal int
+     * @param mesFinal int
+     * @param anoFinal int
+     * @return Devolvemos en un valor de tipo entero.
      */
-    public static void diasEntreFechas( int diaInicio, int mesInicio, int anoInicio, int diaFinal, int mesFinal, int anoFinal ) {
+    public static int diasEntreFechas( int diaInicio, int mesInicio, int anoInicio, int diaFinal, int mesFinal, int anoFinal ) {
 
         int dias = 0;
         final int NUM_MES_ANO = 12;
         int[] vector = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
         if ( diaInicio < 1 || mesInicio < 1 || diaFinal < 1 || mesFinal < 1 || diaInicio > 31 || diaFinal > 31 || mesInicio > 12 || mesFinal > 12 || anoFinal < anoInicio || anoFinal == anoInicio && mesFinal < mesInicio || anoFinal == anoInicio && mesFinal == mesInicio && diaFinal < diaInicio ) {
-            System.out.println( "ERROR, Datos introducidos NO VÁLIDOS" );
+            return -1;
         } else {
             for ( int i = mesInicio - 1; i < NUM_MES_ANO; i++ ) {
                 dias += vector[ i ];
@@ -243,31 +245,28 @@ public class Utilidades {
             if ( bisiesto( anoFinal ) == true && mesFinal > 2 ) {
                 dias += 1;
             }
-            System.out.println( "Hay " + dias + " dias de diferencia" );
+            return dias;
         }
     }
 
     /**
-     *
-     * @param hora
-     * @param minutos
-     * @param segundos
+     * Aquí mostramos los segundos consumidos del día a traves de una hora completa válida dada.
+     * @param hora nint
+     * @param minutos int
+     * @param segundos int
+     * @return Devolvemos un valor del tipo entero.
      */
-    public static void horaASegundos( int hora, int minutos, int segundos ) {
+    public static int horaASegundos( int hora, int minutos, int segundos ) {
 
-        if ( hora > 23 || hora < 0 || minutos > 59 || minutos < 0 || segundos > 59 || segundos < 0 ) {
-            System.out.println( "-1" );
-        } else {
-            int resultado = hora * 3600 + minutos * 60 + segundos;
-            System.out.println( "El total de segundos de la hora dada son: " + resultado + " segundos" );
-        }
+            return ( hora > 23 || hora < 0 || minutos > 59 || minutos < 0 || segundos > 59 || segundos < 0 ) ? -1 : hora * 3600 + minutos * 60 + segundos;
     }
 
     /**
-     *
-     * @param hora
-     * @param minutos
-     * @param segundos
+     * Aquí completamos con 0 a la izquierda donde sea oportuno de una hora dada que sea válida.
+     * @param hora int
+     * @param minutos int
+     * @param segundos int
+     * @return Devolvemos un valor de tipo String.
      */
     public static String horaBonita( int hora, int minutos, int segundos ) {
         String resultado;
