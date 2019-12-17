@@ -13,6 +13,7 @@ package com.acarballeira;
  */
 
 // Importación de librerías
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Mates {
@@ -125,7 +126,7 @@ public class Mates {
      */
     public static int quitaPorDelante( int digitos, int num ) {
                 
-        return  Integer.parseInt(Integer.toString( num ).substring( digitos, Integer.toString( num ).length() ));   
+        return  Integer.parseInt( Integer.toString( num ).substring( digitos, Integer.toString( num ).length() ) );   
     }
     
     /**
@@ -136,7 +137,7 @@ public class Mates {
      */
     public static int pegaPorDetras( int digito, int num ) {
         
-        return num * 10 + digito;
+        return num * ( int ) Math.pow( 10, Integer.toString( digito ).length() ) + digito;
     }
     
     /**
@@ -152,12 +153,13 @@ public class Mates {
     
     public static final double E = 2.7182818284590452354;
     public static final double PI = 3.14159265358979323846;
-
+    public static final double PHI = 1.61803398874989;
+    
     /**
      * Aquí mostramos cual es el de máximo valor de una serie de valores introducidos por teclado hasta que meta un 0, eeutilizando el método max de la clase Mates.
      * @return Devolvemos un valor de tipo entero.
      */
-    public static int numeroMaximo() {
+    public static int numeroMaximo() { // ( int a, int ... b ) Array indeterminado.
         
         int aux = -999999;
         Scanner entrada = new Scanner( System.in );
@@ -167,6 +169,19 @@ public class Mates {
             num = entrada.nextInt();
         }
         return aux;
+    }
+    
+    /**
+     * Aquí recibimos un valor de tipo int y un número indeterminado de valores de tipo entero dentro de un array para luego ver el valor máximo de entre todos ellos.
+     * @param a int
+     * @param b int[]
+     * @return Devolemos un valor de tipo entero.
+     */
+    public static int numeroIndeterminado( int a, int ... b ) {
+        
+        Arrays.sort( b );
+        
+        return a > b[ b.length - 1 ] ? a : b[ b.length - 1 ];
     }
     
 } // fin de la clase Mates

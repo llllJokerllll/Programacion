@@ -32,8 +32,10 @@ public class ProbaUtilidades3 {
         quitaPorDetras( 2, 5646153 );
         System.out.println( quitaPorDelante( 2, 5646153 ) );
         System.out.println( pegaPorDelante( 9, 159 ) );
-        System.out.println("Pi es " + Math.PI);     
-        System.out.println("E es " + Math.E);
+        System.out.println( "Pi es " + PI );     
+        System.out.println( "E es " + E );
+        System.out.println( "PHI es " + PHI );
+        System.out.println( numeroIndeterminado( 99, 5, 9, 15, 69, 115, 30) );
         System.out.println( numeroMaximo() );
 
 
