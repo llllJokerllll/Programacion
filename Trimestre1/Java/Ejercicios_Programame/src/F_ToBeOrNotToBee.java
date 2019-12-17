@@ -41,7 +41,13 @@ public class F_ToBeOrNotToBee {
             for ( int j = 0; j < lado; j++ ) {
                 panalVelutina[ i ][ j ] = entrada.nextInt();
                 velutinas += panalVelutina[ i ][ j ];
-                for ( int k = 0; k < panalVelutina[ i ][ j ]; k++ ) {
+//                for ( int k = 0; k < panalVelutina[ i ][ j ]; k++ ) {
+                if ( panalVelutina[ i ][ j ] != 0 ) {
+                    if ( panalAbejas[ i ][ j ] != 0 ) {
+                        abejasDestro += panalAbejas[ i ][ j ];
+                        cuadriculasDestro++;
+                        panalAbejas[ i ][ j ] = 0;   
+                    }
                     if ( i > 0 ) {
                        if ( panalAbejas[ i - 1 ][ j ] != 0 ) {
                            abejasDestro += panalAbejas[ i - 1 ][ j ];
@@ -104,6 +110,12 @@ public class F_ToBeOrNotToBee {
             }
         }
         // Salida de datos
+        for ( int[] x : panalAbejas ) {
+            for ( int y : x ) {
+                System.out.print( y + " " );
+            }
+            System.out.println( "" );
+        }
         System.out.println( velutinas + " " + abejasDestro + " " + cuadriculasDestro );
         
     } // fin de main
