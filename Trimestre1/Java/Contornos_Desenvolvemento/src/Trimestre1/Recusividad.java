@@ -26,9 +26,11 @@ public class Recusividad {
         System.out.print( "Binario: " );
         decBin( numero );
         System.out.println();
+        
+        System.out.println( sumaNumeros( 10 ) );
     }
 
-    public static void decBin( int n ) {
+    static void decBin( int n ) {
         if ( n < 2 ) {
             System.out.print( n );
             return;
@@ -36,6 +38,15 @@ public class Recusividad {
             decBin( n / 2 );
             System.out.print( n % 2 );
             return;
+        }
+    }
+    
+    static int sumaNumeros( int num ) {
+        
+        if ( num == 0 ) {
+            return 0;
+        } else {
+            return num + sumaNumeros( num - 1 );
         }
     }
 }
