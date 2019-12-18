@@ -66,7 +66,7 @@ public class F_ToBeOrNotToBee {
                             if ( panalAbejas[ i - 1 ][ j + 1 ] != 0 ) {
                                 abejasDestro += panalAbejas[ i - 1 ][ j + 1 ];
                                 cuadriculasDestro++;
-                                panalAbejas[ i - 1 ][ j - 1 ] = 0;
+                                panalAbejas[ i - 1 ][ j + 1 ] = 0;
                             }
                         }
                     }

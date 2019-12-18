@@ -30,7 +30,7 @@ public class ProbaUtilidades4 {
         amosaVector( xeraVector( 3, 9, 5 ), '-' );
         System.out.println( minVectorl( xeraVector( 3, 9, 5 ) ) );
         System.out.println( maxVectorl( xeraVector( 3, 9, 5 ) ) );
-        System.out.println( Arrays.toString( rotaDereitaVector( xeraVector( 5, 10, 1 ), 2 ) ) );
+        System.out.println( Arrays.toString( rotaDereitaVector( xeraVector( 5, 10, 1 ), 15 ) ) );
         System.out.println( procuraLinealArray( xeraVector( 5, 10, 1 ), 2 ) );
         System.out.println( procuraBinariaArray( xeraVector( 10, 20, 1 ), 9 ) );
         System.out.println( tempoExecucionProcura( xeraVector( 1000000, 1000000, 1 ), 700000, 1 ) );
