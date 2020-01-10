@@ -24,8 +24,16 @@ public class ProbaRecursiva {
 
     public static void main( String[] args ) {
         
+        int[] vector = { 2, 5, 3, 9 };
+        
         System.out.println( factorial( 5 ) );
-        System.out.println( fibonacci( 13 ) );
+        System.out.println( cociente( 9, 3 ) );
+        System.out.println( elevado2n( 3, 3 ) );
+        System.out.println( par( 15 ) );
+        System.out.println( fibonacci( 9 ) );
+        System.out.println( multip( 3, 5 ) );
+        System.out.println( mcd( 9, 15 ) );
+        System.out.println( sumaVector( vector, 3 ) );
 
     } // fin de main
     
