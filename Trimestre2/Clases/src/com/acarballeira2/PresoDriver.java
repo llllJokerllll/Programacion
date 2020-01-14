@@ -1,16 +1,18 @@
 package com.acarballeira2;
 
-import com.acarballeira.Preso;
+import com.acarballeira.*;
 
 public class PresoDriver {
 
     public static void main(String[] args) {
         
-        Preso p1 = new Preso("Pablo","Pableras","P007",69);
+        Celda c1 = new Celda("A01", true);
         
-        Preso p2 = new Preso("Jose","Joker","P009",15);
+        Preso p1 = new Preso("Pablo","Pableras","P007",69 , c1);
         
-        Preso p3 = new Preso("Oscar","Navaja","P008",32);
+        Preso p2 = new Preso("Jose","Joker","P009",15 , c1);
+        
+        Preso p3 = new Preso("Oscar","Navaja","P008",32 , c1);
         
         Preso p4 = new Preso();
         
@@ -22,8 +24,15 @@ public class PresoDriver {
         System.out.println( p4 );
         System.out.println( p5 );
 
-        String s = new String("5");
-        System.out.println(1 + 10 + s + 1 + 10);
+        Guardia g1 = new Guardia("Manuel", "98765");
+
+        Guardia g2 = new Guardia("Paco", "1235");
+        
+        Guardia g3 = new Guardia("Pepe", "1654");
+        
+        System.out.println( g1 );
+        System.out.println( g2 );
+        System.out.println( g3 );
     }
 
 }

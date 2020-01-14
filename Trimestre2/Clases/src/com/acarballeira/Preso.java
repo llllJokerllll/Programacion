@@ -1,18 +1,19 @@
 package com.acarballeira;
 
-public class Preso {
+public class Preso extends Persona {
 
     // Propiedades de la clase
-    private String nome = ""; // Aquí usamos el igual para dejar un valor default que nosotros escojamos.
+    // private String nome = ""; // Aquí usamos el igual para dejar un valor default que nosotros escojamos.
     private String apodo;
     private String codigo;
     private int anosSentencia;
     private static int numPresos = 0;
+    private Celda celda;
 
     // Constructores de la clase
     public Preso() {
+        this.nome = "";
         numPresos++;
-        Preso.numPresos++;
     }
     
     public Preso( String apodo, String codigo ) {
@@ -21,21 +22,16 @@ public class Preso {
         this.codigo = codigo;
     }
 
-    public Preso( String nome, String apodo, String codigo, int anosSentencia ) {
-        this(apodo, codigo);
-        this.nome = nome;
+    public Preso( String nome, String apodo, String codigo, int anosSentencia, Celda celda) {
+        super(nome);
+        this.apodo = apodo;
+        this.codigo = codigo;
         this.anosSentencia = anosSentencia;
+        this.getNumPresos();
+        this.celda = celda;
     }
     
     // Métodos get & set de cada propiedad de la clase
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
     public String getApodo() {
         return apodo;
     }
@@ -73,7 +69,7 @@ public class Preso {
         res += "Apodo: " + this.apodo + "\n";
         res += "Código: " + this.codigo + "\n";
         res += "Sentencia: " + this.anosSentencia + "\n";
-        res += "Nº de preso: " + numPresos + "\n";
+        res += "Nº de preso: " + this.getNumPresos() + "\n";
         
         return res;
     }
