@@ -22,6 +22,8 @@ public class PresoDriver {
         System.out.println( p4 );
         System.out.println( p5 );
 
+        String s = new String("5");
+        System.out.println(1 + 10 + s + 1 + 10);
     }
 
 }

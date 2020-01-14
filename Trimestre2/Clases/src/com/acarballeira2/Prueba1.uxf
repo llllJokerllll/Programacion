@@ -43,11 +43,13 @@
       <w>210</w>
       <h>190</h>
     </coordinates>
-    <panel_attributes>&lt;&lt;Vehiculo&gt;&gt;
+    <panel_attributes>&lt;&lt;Preso&gt;&gt;
 --
--marca: String
--modelo: String
-+nomeComercial: String
+-nome: String
+-apodo: String
+-codigo: String
+-anosSentencia: int
+_+numPresos: int_
 --
 +alta
 +baixa
