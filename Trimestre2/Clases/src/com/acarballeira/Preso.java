@@ -14,6 +14,7 @@ public class Preso extends Persona {
     public Preso() {
         this.nome = "";
         numPresos++;
+        Preso.numPresos++;
     }
     
     public Preso( String apodo, String codigo ) {
@@ -60,18 +61,33 @@ public class Preso extends Persona {
         return numPresos;
     }
     
-    // Método toString para imprimir las propiedades de la clase
+    public Celda getCelda() {
+        return celda;
+    }
+
+    public void setCelda(Celda celda) {
+        this.celda = celda;
+    }
+
     @Override
     public String toString() {
-        String res = "";
-        
-        res += "Nome: " + this.nome + "\n";
-        res += "Apodo: " + this.apodo + "\n";
-        res += "Código: " + this.codigo + "\n";
-        res += "Sentencia: " + this.anosSentencia + "\n";
-        res += "Nº de preso: " + this.getNumPresos() + "\n";
-        
-        return res;
+        return "Preso [" + (apodo != null ? "apodo=" + apodo + ", " : "")
+                + (codigo != null ? "codigo=" + codigo + ", " : "") + "anosSentencia=" + anosSentencia + ", "
+                + (celda != null ? "celda=" + celda + ", " : "") + (nome != null ? "nome=" + nome : "") + "]";
     }
+
+    /*
+     * // Método toString para imprimir las propiedades de la clase
+     * 
+     * @Override public String toString() { String res = "";
+     * 
+     * res += "Nome: " + this.nome + "\n"; res += "Apodo: " + this.apodo + "\n"; res
+     * += "Código: " + this.codigo + "\n"; res += "Sentencia: " + this.anosSentencia
+     * + "\n"; res += "Nº de preso: " + this.getNumPresos() + "\n";
+     * 
+     * return res; }
+     */
+    
+    
 
 }

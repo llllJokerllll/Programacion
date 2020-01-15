@@ -20,8 +20,4 @@ public class Persona {
         this.nome = nome;
     }
     
-    @Override
-    public String toString() {
-        return String.format("Nome: " + getNome());
-    }
 }
