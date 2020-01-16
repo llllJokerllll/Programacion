@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"com.acarballeira.exame","c":"Utilidades","l":"dniCorrecto(int, char)","url":"dniCorrecto(int,char)"},{"p":"com.acarballeira.exame","c":"Utilidades","l":"Utilidades()","url":"%3Cinit%3E()"}]
