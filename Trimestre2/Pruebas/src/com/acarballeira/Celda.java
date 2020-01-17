@@ -1,6 +1,15 @@
 package com.acarballeira;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+import sun.jvm.hotspot.gc.cms.LinearAllocBlock;
+
 public class Celda {
+    
     String nombre;
     boolean abierta;
     int capacidad;
@@ -18,19 +27,59 @@ public class Celda {
     public String getNombre() {
         return nombre;
     }
+    
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+    
     public boolean isAbierta() {
         return abierta;
     }
+    
     public void setAbierta(boolean abierta) {
         this.abierta = abierta;
     }
-    public void abrir() {
+    
+    public void abrir( String codigo ) {
+        
+        String codigoValidoCelda = obtenerCodigoCelda();
+        
+        if( codigo.equals(codigoValidoCelda)) {
+            this.abierta = true;
+            System.out.println("Aberta");
+        } else {
+            System.out.println("Código incorrecto");
+        }
         this.abierta = true;
     }
-    public void cerrar() {
+    
+    private String obtenerCodigoCelda() {
+        
+        String linea;
+        String nomeCelda;
+        String codCelda;
+        try {
+            
+            BufferedReader bf = new BufferedReader(new FileReader("c:/claves.txt"));
+            
+            while((linea = bf.readLine()) != null ) {
+                nomeCelda = linea.substring(0, linea.indexOf(":"));
+                if ( nomeCelda.equals(this.nombre)) {
+                    codCelda = linea.substring(linea.indexOf(":") + 1);
+                }
+            }
+            
+            bf.close();
+        } catch ( FileNotFoundException e ) {
+            System.out.println("Non se atopa o ficheiro de claves!!!");
+        } catch (IOException e) {
+            
+        }
+        
+        return "";
+    }
+    
+    public void cerrar( String codigo ) {
         this.abierta = false;
     }
     
