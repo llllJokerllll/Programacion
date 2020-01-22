@@ -7,9 +7,29 @@ public class ArboreDriver {
 
     public static void main(String[] args) {
         
-        Arbore pino = new Arbore(23.00, 2000, "Ramirás", "Piñeiro", "Pinus Pinaster", TipoFolla.PERENNE);
-        Arbore casti = new Arbore(23.00, 1990, "Ramirás", "Piñeiro", "Castanae Sativa", TipoFolla.CADUCO);
-        Arbore ami = new Arbore(23.00, 2003, "Ramirás", "Celanova", "Alnus Glutinosa", TipoFolla.PERENNE);
+        Arbore pino = new Arbore();
+        pino.altura = 23.00;
+        pino.anoNac = 2000;
+        pino.concello = "Ramirás";
+        pino.nomeComun = "Piñeiro";
+        pino.nomeLatino = "Pinus Pinaster";
+        pino.hojas = TipoFolla.PERENNE;
+        
+        Arbore casti = new Arbore();
+        casti.altura = 23.00;
+        casti.anoNac = 1990;
+        casti.concello = "Ramirás";
+        casti.nomeComun = "Piñeiro";
+        casti.nomeLatino = "Castanae Sativa";
+        casti.hojas = TipoFolla.CADUCO;
+        
+        Arbore ami = new Arbore();
+        ami.altura = 23.00; 
+        ami.anoNac = 2003;
+        ami.concello = "Ramirás";
+        ami.nomeComun = "Celanova";
+        ami.nomeLatino = "Alnus Glutinosa";
+        ami.hojas = TipoFolla.PERENNE;
         
         System.out.println(pino);
         System.out.println(casti);
