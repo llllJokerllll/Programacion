@@ -27,13 +27,49 @@ public class Rectangulo {
         this.altura = altura;
     }
     
-    public static double calArea( Rectangulo r ) {
-        return r.altura * r.base;
+    public double calArea() {
+        return this.altura * this.base;
     }
     
-    public static double calPeri( Rectangulo r ) {
-        return 2*( r.altura + r.base );
+    public double calPeri() {
+        return 2*( this.altura + this.base );
     }
+    
+    public String pintaRect() {
+        String res = "";
+        
+        for (int i = 0; i <= this.altura; i++ ) {
+            for (int j = 0; j < this.base * 2; j++ ) {
+                if ( i == 0 ) {
+                    if ( j == 0 || j == this.base * 2 - 1 ) {
+                        res += " ";
+                    } else {
+                        res += "_";
+                    } 
+                } else if ( i == this.altura ) {
+                    if ( j == 0 || j == this.base * 2  - 1 ) {
+                        res += "|";
+                    } else {
+                        res += "_";
+                    }
+                } else {
+                    if ( j == 0 || j == this.base * 2  - 1 ) {
+                        res += "|";
+                    } else {
+                        res += " ";
+                    }
+                }   
+            }
+            res += "\n";
+        }
+        return res;
+    }
+
+    @Override
+    public String toString() {
+        return pintaRect();
+    }
+    
     
     
 }

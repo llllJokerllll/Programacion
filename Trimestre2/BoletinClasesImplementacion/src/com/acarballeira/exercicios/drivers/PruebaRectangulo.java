@@ -9,9 +9,10 @@ public class PruebaRectangulo {
         Rectangulo rect1 = new Rectangulo(10, 5);
         
         
-        System.out.println("El area del rectángulo es: " + Rectangulo.calArea(rect1));
-        System.out.println("El perímetro del rectángulo es: " + Rectangulo.calPeri(rect1));
+        System.out.println("El area del rectángulo es: " + rect1.calArea());
+        System.out.println("El perímetro del rectángulo es: " + rect1.calPeri());
 
+        System.out.println(rect1);
     }
 
 }
