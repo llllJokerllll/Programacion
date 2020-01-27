@@ -1,0 +1,10 @@
+9- nome, apelidos, dni, fechaNac, altura, peso, curso, repetidor. Si
+10- marca, modelo, acabado, color, añoFabri, añoMatri, siniestro.
+abrir, cerrar, encender, apagar, acelerar, frenar, estacionar. Ferrari599
+11- habitacion, entrada, iluminacion, baño, ventanas.
+12- marca, modelo, tipo, numRuedas, combustible, capacidad.
+Coche, Motocicleta, Camión, Avión.
+13- anchoInterno, anchoExterno, altoInterno, altoExterno, posicionY, posicionX.
+reducirVentana, aumentarVentana, moverVentana, abirVentana, cerarVentana.
+14-si
+15-
