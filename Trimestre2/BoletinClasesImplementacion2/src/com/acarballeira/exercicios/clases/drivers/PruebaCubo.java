@@ -40,6 +40,7 @@ public class PruebaCubo {
         System.out.println("\nCubote: \n");
         cubote.pinta();
 
+        System.out.println(cubito.toString());
     }
 
 }
