@@ -21,7 +21,7 @@ public class Circulo extends Figura {
 
     @Override
     public String toString() {
-        return String.format("Circulo [obtenerArea()=%s %s cadrados, obtenerVolumen()=%s %s cadrados]", obtenerArea(), this.getUnidades(), obtenerVolumen(), this.getUnidades());
+        return String.format("Circulo [obtenerArea()=%s %s cadrados, obtenerVolumen()=%s %s cúbicos]", obtenerArea(), this.getUnidades(), obtenerVolumen(), this.getUnidades());
     }
     
     

@@ -23,7 +23,7 @@ public class Cilindro extends Figura {
 
     @Override
     public String toString() {
-        return String.format("Cilindro [obtenerArea()=%s %s cadrados, obtenerVolumen()=%s %s cadrados]", obtenerArea(), this.getUnidades(), obtenerVolumen(), this.getUnidades());
+        return String.format("Cilindro [obtenerArea()=%s %s cadrados, obtenerVolumen()=%s %s cúbicos]", obtenerArea(), this.getUnidades(), obtenerVolumen(), this.getUnidades());
     }
     
     
