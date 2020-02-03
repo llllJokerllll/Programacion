@@ -6,13 +6,14 @@ public class Libro {
     protected String autor;
     protected int numPax;
     protected String editorial;
-    protected int codigo = 0;
+    protected static int codigo = 0;
     protected final static byte INCREMENTO_CODIGO = 5;
     
     public Libro(String titulo, String autor ) {
         super();
         this.titulo = titulo;
         this.autor = autor;
+        this.codigo += INCREMENTO_CODIGO;
     }
     
     public Libro(String titulo, String autor, int numPax, String editorial) {
@@ -56,7 +57,7 @@ public class Libro {
         this.editorial = editorial;
     }
 
-    public int getCodigo() {
+    public static int getCodigo() {
         return codigo;
     }
 
@@ -102,7 +103,7 @@ public class Libro {
 
     @Override
     public String toString() {
-        return String.format("------- Libro -------\n%s\n%s Ed.%s\n%d páxinas\nCódigo: %d\n---------------------\n", titulo, autor, editorial, numPax, codigo);
+        return String.format("------- Libro -------\n%s\n%s Ed.%s\n%d páxinas\nCódigo: %d\n---------------------\n", titulo, autor, (editorial == null) ? "" : editorial, numPax, codigo);
     }
     
     
