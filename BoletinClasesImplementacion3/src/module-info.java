@@ -1,0 +1,2 @@
+module BoletinClasesImplementacion3 {
+}
