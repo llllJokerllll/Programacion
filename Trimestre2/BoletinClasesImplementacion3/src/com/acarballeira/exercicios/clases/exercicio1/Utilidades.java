@@ -9,7 +9,8 @@ public class Utilidades {
 		listaDir("c:/");
 		sizeFolder("c:/");
 		listaDirDetallado("c:/");
-		
+		listarDirExt("c:/", "txt");
+		System.out.println(sizeFolderRec("c:/construccion/"));
 
 	}
 
@@ -34,9 +35,9 @@ public class Utilidades {
 		} else {
 			for (int i = 0; i < f.length; i++) {
 				if (f[i].isDirectory()) {
-					System.out.println("d " + f[i].getName() + " 0");
+					System.out.printf("d %30s %20s\n", f[i].getName(), "0");
 				} else {
-					System.out.println("f " + f[i].getName() + " " + f[i].length());
+					System.out.printf("f %30s %20s\n", f[i].getName(), f[i].length());
 				}
 			}
 		}
@@ -53,8 +54,8 @@ public class Utilidades {
 				if (f[i].isFile()) {
 					if (f[i].toString().endsWith(y)) {
 						System.out.println(f[i].getName());
-					}
-				}
+					} 
+				} 
 			}
 		}
 	}
@@ -76,5 +77,23 @@ public class Utilidades {
 		}
 	}
 
+	public static int sizeFolderRec(String x) {
+        File dir = new File(x);
+        File[] f = dir.listFiles();
+        int aux = 0;
+
+        if (f == null) {
+            System.out.println("No hay ficheros en el directorio especificado");
+        } else {
+            for (int i = 0; i < f.length; i++) {
+                if (f[i].isFile()) {
+                    aux += f[i].length();
+                } else {
+                    aux += sizeFolderRec(f[i].getPath());
+                }
+            }
+        }
+        return aux;
+    }
 
 }
