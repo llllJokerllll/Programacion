@@ -120,7 +120,7 @@ public abstract class Via {
         } else if ( kmAreparar < 0 ) {
             numKmDeficientes = 0;
         } else {
-            numKmDeficientes -= kmAreparar;
+            numKmDeficientes += kmAreparar;
         }
         
         return numKmDeficientes;
