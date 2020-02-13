@@ -1,8 +1,6 @@
-package com.acarballeira.exercicios.clases.drivers;
+package com.acarballeira.exercicios.clases.exercicio5;
 
 import java.util.Scanner;
-
-import com.acarballeira.exercicios.clases.exercicio9.Libro;
 
 public class BibliotecaLibros {
 
@@ -76,7 +74,7 @@ public class BibliotecaLibros {
         Scanner sc = new Scanner(System.in);
         
         for (int i = 0; i < biblioteca.length; i++) {
-            if (biblioteca[i].getCodigo() == codigo ) {
+            if (biblioteca[i].codigo == codigo ) {
                 System.out.print("\nEDITANDO LIBRO\n===========\nPor favor, introduzca os datos do libro a editar.\nTítulo: ");
                 String titulo = sc.nextLine();
                 System.out.print("Autor: ");
@@ -86,16 +84,16 @@ public class BibliotecaLibros {
                 System.out.print("Número de páxinas: ");
                 int numPax = sc.nextInt();
                 if (!titulo.equals("")) {
-                    biblioteca[i].setTitulo(titulo);
+                    biblioteca[i].titulo = titulo;
                 }
                 if (!autor.equals("")) {
-                    biblioteca[i].setAutor(autor);
+                    biblioteca[i].autor = autor;
                 }
                 if (!editorial.equals("")) {
-                    biblioteca[i].setEditorial(editorial);
+                    biblioteca[i].editorial = editorial;
                 }
                 if (numPax != 0) {
-                    biblioteca[i].setNumPax(numPax);
+                    biblioteca[i].numPax = numPax;
                 }
 
                 break;
@@ -105,7 +103,7 @@ public class BibliotecaLibros {
     
     public static void borrarLibro(int codigo) {
         for (int i = 0; i < biblioteca.length; i++) {
-            if (biblioteca[i].getCodigo() == codigo ) {
+            if (biblioteca[i].codigo == codigo ) {
                 for (int j = i; j < biblioteca.length - 1; j++) {
                     biblioteca[j] = biblioteca[j + 1];
                 }
