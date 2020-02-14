@@ -1,16 +1,15 @@
 package com.acarballeira.exercicios.clases.exercicio5;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BibliotecaLibros {
-
-    private static final int MAX_LIBROS = 10;
-    private static Libro[] biblioteca; 
+ 
     private final static byte INCREMENTO_CODIGO = 5;
     
     public static void main(String[] args) {
         
-        biblioteca = new Libro[MAX_LIBROS];
+        ArrayList<Libro> biblioteca = new ArrayList<Libro>();
         int opcion;
         int contador = 0;
         int contadorCodigo = 0;
@@ -25,16 +24,16 @@ public class BibliotecaLibros {
                 break;
             case 2:
                 contadorCodigo += INCREMENTO_CODIGO;
-                novoLibro(biblioteca, MAX_LIBROS, contador, contadorCodigo);
+                novoLibro(biblioteca, contador, contadorCodigo);
                 contador++;
                 break;
             case 3:
                 System.out.print("Por favor, introduzca el código del libro a editar: ");
-                editarLibro(sc.nextInt());
+                editarLibro(biblioteca, sc.nextInt());
                 break;
             case 4:
                 System.out.print("Por favor, introduzca el código del libro a borrar: ");
-                borrarLibro(sc.nextInt());
+                borrarLibro(biblioteca, sc.nextInt());
                 break;
             default:
                 break;
@@ -46,7 +45,7 @@ public class BibliotecaLibros {
 
     }
     
-    public static void listar( Libro[] biblioteca ) {
+    public static void listar(ArrayList<Libro> biblioteca) {
   
         System.out.println("\nLISTADO\n========");
         for( Libro x : biblioteca ) {
@@ -55,7 +54,7 @@ public class BibliotecaLibros {
        
     }
 
-    public static void novoLibro(Libro[] biblioteca, int MAX_LIBROS, int contador, int contadorCodigo) {
+    public static void novoLibro(ArrayList<Libro> biblioteca, int contador, int contadorCodigo) {
         Scanner sc = new Scanner(System.in);
             System.out.print("\nNOVO LIBRO\n===========\nPor favor, introduzca os datos do libro.\nTítulo: ");
             String titulo = sc.nextLine();
@@ -66,15 +65,15 @@ public class BibliotecaLibros {
             System.out.print("Número de páxinas: ");
             int numPax = sc.nextInt();
             
-            biblioteca[contador] = new Libro(titulo, autor, numPax, editorial, contadorCodigo);
+            biblioteca.add(new Libro(titulo, autor, numPax, editorial, contadorCodigo));
             
     }
     
-    public static void editarLibro(int codigo) {
+    public static void editarLibro(ArrayList<Libro> biblioteca, int codigo) {
         Scanner sc = new Scanner(System.in);
         
-        for (int i = 0; i < biblioteca.length; i++) {
-            if (biblioteca[i].codigo == codigo ) {
+        for (int i = 0; i < biblioteca.size(); i++) {
+            if (biblioteca.get(i).codigo == codigo ) {
                 System.out.print("\nEDITANDO LIBRO\n===========\nPor favor, introduzca os datos do libro a editar.\nTítulo: ");
                 String titulo = sc.nextLine();
                 System.out.print("Autor: ");
@@ -84,16 +83,16 @@ public class BibliotecaLibros {
                 System.out.print("Número de páxinas: ");
                 int numPax = sc.nextInt();
                 if (!titulo.equals("")) {
-                    biblioteca[i].titulo = titulo;
+                    biblioteca.get(i).titulo = titulo;
                 }
                 if (!autor.equals("")) {
-                    biblioteca[i].autor = autor;
+                    biblioteca.get(i).autor = autor;
                 }
                 if (!editorial.equals("")) {
-                    biblioteca[i].editorial = editorial;
+                    biblioteca.get(i).editorial = editorial;
                 }
                 if (numPax != 0) {
-                    biblioteca[i].numPax = numPax;
+                    biblioteca.get(i).numPax = numPax;
                 }
 
                 break;
@@ -101,12 +100,10 @@ public class BibliotecaLibros {
         }
     }
     
-    public static void borrarLibro(int codigo) {
-        for (int i = 0; i < biblioteca.length; i++) {
-            if (biblioteca[i].codigo == codigo ) {
-                for (int j = i; j < biblioteca.length - 1; j++) {
-                    biblioteca[j] = biblioteca[j + 1];
-                }
+    public static void borrarLibro(ArrayList<Libro> biblioteca, int codigo) {
+        for (int i = 0; i < biblioteca.size(); i++) {
+            if (biblioteca.get(i).codigo == codigo ) {
+                biblioteca.remove(i);
             }
         }
     }
