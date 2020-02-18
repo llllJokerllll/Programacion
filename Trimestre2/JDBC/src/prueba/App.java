@@ -10,9 +10,9 @@ public class App {
 
     public static void main(String[] args) {
         
-        String mysqlUrl = "jdbc:mysql://10.10.33.137/bombones?serverTimeZone=Europe/Madrid";
-        String usuario = "root";
-        String clave = "Abc123..";
+        String mysqlUrl = "jdbc:mysql://localhost/bombones?serverTimeZone=Europe/Madrid";
+        String usuario = "Joker";
+        String clave = "Pw159159*";
         
         Connection con = null;
         Statement st;
@@ -21,9 +21,9 @@ public class App {
         try {
             con = DriverManager.getConnection(mysqlUrl, usuario, clave);
             st = con.createStatement();
-            rs = st.executeQuery("SELECT * FROM bombones");
+            rs = st.executeQuery("SELECT Nombre FROM clientes");
             while(rs.next()) {
-                System.out.println(rs.getString("idBombon"));
+                System.out.println(rs.getString(1));
             }
         } catch (SQLException e) {
             e.printStackTrace();
