@@ -40,28 +40,44 @@ public class CPJLaboratorioFinal {
 		
 		switch(opcion) {
 		case 1:
-			System.out.print("Introduzca el término que quiera traducir: ");
-			esp = br.readLine();
-			System.out.println(d1.traducir(esp));
-			break;
+		    //1. Creamos el objeto que administra el catalogo de personas
+            //La creacion del archivo es opcional, de todas maneras se creara 
+            //al escribir por primera vez en el archivo
+            catalogoPeli.iniciarArchivo(nombreArchivo);
+            break;
 		case 2:
-			System.out.print("Introduzca el término: ");
-			esp = br.readLine();
-			System.out.print("Introduzca la traducción: ");
-			ing = br.readLine();
-			d1.engadirTermo(esp, ing);
-			break;
+		    //2. agregar informacion archivo
+            System.out.println("Introduce el nombre de una pelicula a agregar:");
+            String nombre = "";
+            try {
+                nombre = br.readLine();
+            } catch (IOException e) {
+                e.printStackTrace(System.out);
+            }
+            catalogoPeli.agregarPelicula(nombre, nombreArchivo);
+            break;
 		case 3:
-			d1.baleirar();
-			break;
+		    //3. listar catalogo completo
+            catalogoPeli.listarPeliculas(nombreArchivo);
+            break;
 		case 4:
-			buscarPelicula();
-			break;
+		    //4. Buscar pelicula
+            System.out.println("Introduce el nombre de una pelicula a buscar:");
+            String buscar = "";
+            try {
+                buscar = br.readLine();
+            } catch (IOException e) {
+                e.printStackTrace(System.out);
+            }
+            catalogoPeli.buscarPelicula(nombreArchivo, buscar);
+            break;
 		case 0:
 			System.out.println("Hasta otra!");
 			break;
 		default:
 			System.out.println("ERROR, opción no válida");
-	}
+		}
+		System.out.println("\n");
 
+	}
 }
