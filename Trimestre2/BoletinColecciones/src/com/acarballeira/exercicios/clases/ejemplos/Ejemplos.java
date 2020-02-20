@@ -8,6 +8,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 
 
@@ -24,7 +25,18 @@ class Xogador implements Comparable<Xogador> {
         this.dorsal = dorsal;
     }
 
-   
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Xogador other = (Xogador) obj;
+        return dorsal == other.dorsal && Objects.equals(nome, other.nome) && Objects.equals(posicion, other.posicion);
+    }
+
 
     @Override
     public String toString() {
@@ -46,7 +58,17 @@ class Xogador implements Comparable<Xogador> {
     
 }
 
-class CompararXogador implements Comparator<Xogador> {
+class CompararNombre implements Comparator<Xogador> {
+
+    @Override
+    public int compare(Xogador o1, Xogador o2) {
+ 
+        return o1.nome.compareTo(o2.nome);
+    }
+    
+}
+
+class CompararDorsal implements Comparator<Xogador> {
 
     @Override
     public int compare(Xogador o1, Xogador o2) {
@@ -85,18 +107,7 @@ public class Ejemplos {
         
         //Collections.sort(equipo);
         //equipo.sort(new CompararXogador());
-        equipo.sort(new Comparator<Xogador>(){
-            public int compare(Xogador o1, Xogador o2) {
-                //return o1.dorsal - o2.dorsal;
-                if (o1.dorsal < o2.dorsal) {
-                    return -1;
-                } else if (o1.dorsal > o2.dorsal) {
-                    return 1;
-                } else {
-                    return o1.nome.compareTo(o2.nome);
-                }
-            }
-        });
+        equipo.sort(new CompararDorsal().thenComparing(new CompararNombre()));
         
         
         for (Xogador x : equipo) {
