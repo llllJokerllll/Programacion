@@ -1,7 +1,9 @@
 package acepta.el.reto;
 
+
 import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Collections;
 import java.util.LinkedList;
@@ -10,6 +12,7 @@ public class AceptaElReto464 {
     
     public static void main(String[] args) throws IOException {
 
+        InputStream in;
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         Integer casos;

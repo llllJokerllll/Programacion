@@ -1,11 +1,24 @@
+/*
+ * 
+ */
 package ejemplos;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class ProbaExcepcion.
+ */
 public class ProbaExcepcion {
 
+    /**
+     * Fallo.
+     *
+     * @param valor the valor
+     * @throws ExcepcionPropia the excepcion propia
+     */
     public static void fallo(int valor) throws ExcepcionPropia {
         
         if(valor > 100) 
@@ -13,6 +26,12 @@ public class ProbaExcepcion {
         
     }
     
+    /**
+     * Calculo.
+     *
+     * @return the int
+     * @throws IOException Signals that an I/O exception has occurred.
+     */
     public static int calculo() throws IOException {
         
         
