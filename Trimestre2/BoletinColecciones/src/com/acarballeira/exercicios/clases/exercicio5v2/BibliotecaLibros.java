@@ -4,14 +4,11 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class BibliotecaLibros {
- 
-    private final static byte INCREMENTO_CODIGO = 5;
     
     public static void main(String[] args) {
         
         HashMap<Integer, Libro> biblioteca = new HashMap<Integer, Libro>();
         int opcion;
-        int contadorCodigo = 0;
         Scanner sc = new Scanner(System.in);
         
         do {
@@ -22,8 +19,7 @@ public class BibliotecaLibros {
                 listar(biblioteca);
                 break;
             case 2:
-                contadorCodigo += INCREMENTO_CODIGO;
-                novoLibro(biblioteca, contadorCodigo);
+                novoLibro(biblioteca);
                 break;
             case 3:
                 System.out.print("Por favor, introduzca el código del libro a editar: ");
@@ -40,7 +36,7 @@ public class BibliotecaLibros {
         } while ( opcion != 5 );
         
         sc.close();
-
+        
     }
     
     public static void listar(HashMap<Integer, Libro> biblioteca) {
@@ -52,7 +48,7 @@ public class BibliotecaLibros {
        
     }
 
-    public static void novoLibro(HashMap<Integer, Libro> biblioteca, int contadorCodigo) {
+    public static void novoLibro(HashMap<Integer, Libro> biblioteca) {
         Scanner sc = new Scanner(System.in);
             System.out.print("\nNOVO LIBRO\n===========\nPor favor, introduzca os datos do libro.\nTítulo: ");
             String titulo = sc.nextLine();
@@ -62,8 +58,9 @@ public class BibliotecaLibros {
             String editorial = sc.nextLine();
             System.out.print("Número de páxinas: ");
             int numPax = sc.nextInt();
+            Libro res = new Libro(titulo, autor, numPax, editorial);
             
-            biblioteca.put(contadorCodigo, new Libro(titulo, autor, numPax, editorial, contadorCodigo));
+            biblioteca.put(res.getCodigo(), res);
             
     }
     

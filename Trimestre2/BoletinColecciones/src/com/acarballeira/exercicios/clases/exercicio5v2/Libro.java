@@ -6,22 +6,35 @@ public class Libro {
     protected String autor;
     protected int numPax;
     protected String editorial;
-    protected int codigo;
+    protected int codigo = 0;
+    protected final static byte INCREMENTO_CODIGO = 5;
+    private static int ultimoCod = 0;
     
-    public Libro(String titulo, String autor, int codigo ) {
+    public Libro(String titulo, String autor ) {
         super();
         this.titulo = titulo;
         this.autor = autor;
-        this.codigo = codigo;
+        if (ultimoCod == 0) {
+            this.codigo = 0;
+        } else {
+            this.codigo = ultimoCod + INCREMENTO_CODIGO;
+            ultimoCod = this.codigo;
+        }
+        
     }
     
-    public Libro(String titulo, String autor, int numPax, String editorial, int codigo) {
+    public Libro(String titulo, String autor, int numPax, String editorial) {
         super();
         this.titulo = titulo;
         this.autor = autor;
         this.numPax = numPax;
         this.editorial = editorial;
-        this.codigo = codigo;
+        if (ultimoCod == 1) {
+            this.codigo = 0;
+        } else {
+            this.codigo = ultimoCod + INCREMENTO_CODIGO;
+        }
+        ultimoCod = this.codigo;
     }
 
     public String getTitulo() {
