@@ -22,6 +22,15 @@ class Persoa {
     }
 
     @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + idade;
+        result = prime * result + ((nomCompleto == null) ? 0 : nomCompleto.hashCode());
+        return result;
+    }
+
+    @Override
     public boolean equals(Object obj) {
         if (this == obj)
             return true;
@@ -30,7 +39,14 @@ class Persoa {
         if (getClass() != obj.getClass())
             return false;
         Persoa other = (Persoa) obj;
-        return this.nomCompleto.equals(other.nomCompleto);
+        if (idade != other.idade)
+            return false;
+        if (nomCompleto == null) {
+            if (other.nomCompleto != null)
+                return false;
+        } else if (!nomCompleto.equals(other.nomCompleto))
+            return false;
+        return true;
     }
     
     
