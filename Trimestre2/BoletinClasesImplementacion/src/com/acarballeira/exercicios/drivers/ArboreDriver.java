@@ -3,8 +3,17 @@ package com.acarballeira.exercicios.drivers;
 import com.acarballeira.exercicios.clases.exercicio1.Arbore;
 import com.acarballeira.exercicios.clases.exercicio1.TipoFolla;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class ArboreDriver.
+ */
 public class ArboreDriver {
 
+    /**
+     * The main method.
+     *
+     * @param args the arguments
+     */
     public static void main(String[] args) {
         
         Arbore pino = new Arbore();

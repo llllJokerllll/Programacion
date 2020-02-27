@@ -5,8 +5,17 @@ import com.acarballeira.exercicios.clases.exercicio5.Circulo;
 import com.acarballeira.exercicios.clases.exercicio5.Triangulo;
 import com.acarballeira.exercicios.clases.exercicio5.Unidades;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class ProbaFigura.
+ */
 public class ProbaFigura {
 
+    /**
+     * The main method.
+     *
+     * @param args the arguments
+     */
     public static void main(String[] args) {
         
         Triangulo t1 = new Triangulo("Triangulo", Unidades.CM, 4, 5);

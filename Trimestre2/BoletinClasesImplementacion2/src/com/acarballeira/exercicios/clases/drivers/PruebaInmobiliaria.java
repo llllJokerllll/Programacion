@@ -4,8 +4,17 @@ import com.acarballeira.exercicios.clases.exercicio3.Estado;
 import com.acarballeira.exercicios.clases.exercicio3.Local;
 import com.acarballeira.exercicios.clases.exercicio3.Pisos;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class PruebaInmobiliaria.
+ */
 public class PruebaInmobiliaria {
 
+    /**
+     * The main method.
+     *
+     * @param args the arguments
+     */
     public static void main(String[] args) {
         
         Pisos p1 = new Pisos("Martin Codax", 49, Estado.NUEVO, 5);

@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"com.acarballeira.exercicios.clases.exercicio1","l":"Ejercicio1"},{"p":"com.acarballeira.exercicios.clases.exercicio3","l":"ExcepcionPropia"},{"p":"com.acarballeira.exercicios.clases.exercicio2","l":"Exercicio2"},{"p":"com.acarballeira.exercicios.clases.exercicio3","l":"Exercicio3"}]

@@ -11,10 +11,16 @@ import com.acarballeira.exercicios.clases.exercicio7.Finca;
 import com.acarballeira.exercicios.clases.exercicio7.Parcela;
 import com.acarballeira.exercicios.clases.exercicio7.TipoCultivo;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class ProbaFinca.
+ */
 public class ProbaFinca {
 
     /**
-     * @param args
+     * The main method.
+     *
+     * @param args the arguments
      */
     public static void main(String[] args) {
         

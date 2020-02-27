@@ -1,7 +1,16 @@
 package com.acarballeira.exercicios.clases.exercicio1;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Ejercicio1.
+ */
 public class Ejercicio1 {
 
+    /**
+     * The main method.
+     *
+     * @param args the arguments
+     */
     public static void main(String[] args) {
         
         try {
