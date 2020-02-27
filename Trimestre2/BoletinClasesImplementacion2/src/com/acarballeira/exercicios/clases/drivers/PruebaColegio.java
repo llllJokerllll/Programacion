@@ -5,8 +5,17 @@ import com.acarballeira.exercicios.clases.exercicio2.Estudiante;
 import com.acarballeira.exercicios.clases.exercicio2.Persona;
 import com.acarballeira.exercicios.clases.exercicio2.Profesor;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class PruebaColegio.
+ */
 public class PruebaColegio {
 
+    /**
+     * The main method.
+     *
+     * @param args the arguments
+     */
     public static void main(String[] args) {
     Persona p1 = new Persona("Julio", "Mosquera González", "76767676F", "Casado");
     

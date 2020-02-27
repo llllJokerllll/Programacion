@@ -1,3 +1,6 @@
+/*
+ * @Author Jose Manuel Sabarís García
+ */
 package com.acarballeira.exercicios.clases.ejemplos;
 
 import java.util.ArrayList;
@@ -12,6 +15,7 @@ import java.util.Objects;
 import java.util.Set;
 
 
+// TODO: Auto-generated Javadoc
 class Xogador implements Comparable<Xogador> {
     
     String nome;
@@ -79,8 +83,16 @@ class CompararDorsal implements Comparator<Xogador> {
 }
 
 
+/**
+ * The Class Ejemplos.
+ */
 public class Ejemplos {
 
+    /**
+     * The main method.
+     *
+     * @param args the arguments
+     */
     public static void main(String[] args) {
         
         ArrayList<Integer> lista = new ArrayList<Integer>();

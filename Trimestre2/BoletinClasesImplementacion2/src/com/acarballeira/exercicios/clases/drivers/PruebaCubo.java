@@ -2,8 +2,17 @@ package com.acarballeira.exercicios.clases.drivers;
 
 import com.acarballeira.exercicios.clases.exercicio1.Cubo;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class PruebaCubo.
+ */
 public class PruebaCubo {
 
+    /**
+     * The main method.
+     *
+     * @param args the arguments
+     */
     public static void main(String[] args) {
         
         Cubo cubito = new Cubo(2);

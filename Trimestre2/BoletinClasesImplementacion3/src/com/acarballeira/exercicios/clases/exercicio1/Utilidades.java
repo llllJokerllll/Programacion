@@ -2,8 +2,17 @@ package com.acarballeira.exercicios.clases.exercicio1;
 
 import java.io.File;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Utilidades.
+ */
 public class Utilidades {
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		
 		listaDir("c:/");
@@ -14,6 +23,11 @@ public class Utilidades {
 
 	}
 
+	/**
+	 * Lista dir.
+	 *
+	 * @param x the x
+	 */
 	public static void listaDir(String x) {
 		File dir = new File(x);
 		String[] f = dir.list();
@@ -26,6 +40,11 @@ public class Utilidades {
 		}
 	}
 
+	/**
+	 * Lista dir detallado.
+	 *
+	 * @param x the x
+	 */
 	public static void listaDirDetallado(String x) {
 		File dir = new File(x);
 		File[] f = dir.listFiles();
@@ -43,6 +62,12 @@ public class Utilidades {
 		}
 	}
 
+	/**
+	 * Listar dir ext.
+	 *
+	 * @param x the x
+	 * @param y the y
+	 */
 	public static void listarDirExt(String x, String y) {
 		File dir = new File(x);
 		File[] f = dir.listFiles();
@@ -60,6 +85,11 @@ public class Utilidades {
 		}
 	}
 
+	/**
+	 * Size folder.
+	 *
+	 * @param x the x
+	 */
 	public static void sizeFolder(String x) {
 		File dir = new File(x);
 		File[] f = dir.listFiles();
@@ -77,6 +107,12 @@ public class Utilidades {
 		}
 	}
 
+	/**
+	 * Size folder rec.
+	 *
+	 * @param x the x
+	 * @return the int
+	 */
 	public static int sizeFolderRec(String x) {
         File dir = new File(x);
         File[] f = dir.listFiles();

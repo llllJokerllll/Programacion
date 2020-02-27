@@ -1,14 +1,30 @@
+/*
+ * @Author Jose Manuel Sabarís García
+ */
 package com.acarballeira.exercicios.clases.exercicio7;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class App.
+ */
 public class App {
 
+	/** The d 1. */
 	private Diccionario d1 = new Diccionario();
+	
+	/** The br. */
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	public static void main(String[] args) throws IOException {
 		
 		int opcion = 0;
@@ -26,6 +42,11 @@ public class App {
 		
 	
 
+	/**
+	 * Menu.
+	 *
+	 * @return the int
+	 */
 	public int menu() {
 		
 		System.out.print("DICCIONARIO\n-----------\n1. Consultar traducción\n2. Añadir traducción\n3. Vaciar diccionario\n4. Añadir datos de prueba\n5. Salir\nIntroduzca la opcion a usar: ");
@@ -41,6 +62,11 @@ public class App {
 		}
 	}
 	
+	/**
+	 * Crear terminos prueba.
+	 *
+	 * @throws IOException Signals that an I/O exception has occurred.
+	 */
 	public void crearTerminosPrueba() throws IOException {
 		
 		d1.engadirTermo("Uno", "One");
@@ -57,6 +83,12 @@ public class App {
 		
 	}
 
+/**
+ * Opcion escollida.
+ *
+ * @param opcion the opcion
+ * @throws IOException Signals that an I/O exception has occurred.
+ */
 public void opcionEscollida(int opcion) throws IOException {
 		
 		String esp;

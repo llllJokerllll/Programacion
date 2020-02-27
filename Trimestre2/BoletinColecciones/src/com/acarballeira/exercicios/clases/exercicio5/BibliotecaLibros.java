@@ -1,12 +1,25 @@
+/*
+ * @Author Jose Manuel Sabarís García
+ */
 package com.acarballeira.exercicios.clases.exercicio5;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class BibliotecaLibros.
+ */
 public class BibliotecaLibros {
  
+    /** The Constant INCREMENTO_CODIGO. */
     private final static byte INCREMENTO_CODIGO = 5;
     
+    /**
+     * The main method.
+     *
+     * @param args the arguments
+     */
     public static void main(String[] args) {
         
         ArrayList<Libro> biblioteca = new ArrayList<Libro>();
@@ -45,6 +58,11 @@ public class BibliotecaLibros {
 
     }
     
+    /**
+     * Listar.
+     *
+     * @param biblioteca the biblioteca
+     */
     public static void listar(ArrayList<Libro> biblioteca) {
   
         System.out.println("\nLISTADO\n========");
@@ -54,6 +72,13 @@ public class BibliotecaLibros {
        
     }
 
+    /**
+     * Novo libro.
+     *
+     * @param biblioteca the biblioteca
+     * @param contador the contador
+     * @param contadorCodigo the contador codigo
+     */
     public static void novoLibro(ArrayList<Libro> biblioteca, int contador, int contadorCodigo) {
         Scanner sc = new Scanner(System.in);
             System.out.print("\nNOVO LIBRO\n===========\nPor favor, introduzca os datos do libro.\nTítulo: ");
@@ -69,6 +94,12 @@ public class BibliotecaLibros {
             
     }
     
+    /**
+     * Editar libro.
+     *
+     * @param biblioteca the biblioteca
+     * @param codigo the codigo
+     */
     public static void editarLibro(ArrayList<Libro> biblioteca, int codigo) {
         Scanner sc = new Scanner(System.in);
         
@@ -100,6 +131,12 @@ public class BibliotecaLibros {
         }
     }
     
+    /**
+     * Borrar libro.
+     *
+     * @param biblioteca the biblioteca
+     * @param codigo the codigo
+     */
     public static void borrarLibro(ArrayList<Libro> biblioteca, int codigo) {
         for (int i = 0; i < biblioteca.size(); i++) {
             if (biblioteca.get(i).codigo == codigo ) {

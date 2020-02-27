@@ -3,8 +3,17 @@ package com.acarballeira.exercicios.clases.exercicio2;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Exercicio2.
+ */
 public class Exercicio2 {
 
+    /**
+     * The main method.
+     *
+     * @param args the arguments
+     */
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);

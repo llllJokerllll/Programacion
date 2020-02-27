@@ -1,7 +1,17 @@
 package com.acarballeira.exercicios.clases.exercicio6;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class PruebaTiempoCorrido.
+ */
 public class PruebaTiempoCorrido {
 
+    /**
+     * The main method.
+     *
+     * @param args the arguments
+     * @throws InterruptedException the interrupted exception
+     */
     public static void main(String[] args) throws InterruptedException {
         
         Tiempo inicio;

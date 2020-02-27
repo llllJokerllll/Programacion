@@ -2,8 +2,17 @@ package com.acarballeira.exercicios.drivers;
 
 import com.acarballeira.exercicios.clases.exercicio4.*;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class PruebaRectangulo.
+ */
 public class PruebaRectangulo {
 
+    /**
+     * The main method.
+     *
+     * @param args the arguments
+     */
     public static void main(String[] args) {
         
         Rectangulo rect1 = new Rectangulo(10, 5);

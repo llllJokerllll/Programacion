@@ -1,10 +1,22 @@
+/*
+ * @Author Jose Manuel Sabarís García
+ */
 package com.acarballeira.exercicios.clases.exercicio5v2;
 
 import java.util.HashMap;
 import java.util.Scanner;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class BibliotecaLibros.
+ */
 public class BibliotecaLibros {
     
+    /**
+     * The main method.
+     *
+     * @param args the arguments
+     */
     public static void main(String[] args) {
         
         HashMap<Integer, Libro> biblioteca = new HashMap<Integer, Libro>();
@@ -39,6 +51,11 @@ public class BibliotecaLibros {
         
     }
     
+    /**
+     * Listar.
+     *
+     * @param biblioteca the biblioteca
+     */
     public static void listar(HashMap<Integer, Libro> biblioteca) {
   
         System.out.println("\nLISTADO\n========");
@@ -48,6 +65,11 @@ public class BibliotecaLibros {
        
     }
 
+    /**
+     * Novo libro.
+     *
+     * @param biblioteca the biblioteca
+     */
     public static void novoLibro(HashMap<Integer, Libro> biblioteca) {
         Scanner sc = new Scanner(System.in);
             System.out.print("\nNOVO LIBRO\n===========\nPor favor, introduzca os datos do libro.\nTítulo: ");
@@ -64,6 +86,12 @@ public class BibliotecaLibros {
             
     }
     
+    /**
+     * Editar libro.
+     *
+     * @param biblioteca the biblioteca
+     * @param codigo the codigo
+     */
     public static void editarLibro(HashMap<Integer, Libro> biblioteca, int codigo) {
         Scanner sc = new Scanner(System.in);
         
@@ -98,6 +126,12 @@ public class BibliotecaLibros {
         }
     }
     
+    /**
+     * Borrar libro.
+     *
+     * @param biblioteca the biblioteca
+     * @param codigo the codigo
+     */
     public static void borrarLibro(HashMap<Integer, Libro> biblioteca, int codigo) {
         Libro l = (Libro) biblioteca.get(codigo);
         if (l!= null) {

@@ -4,12 +4,26 @@ import java.util.Scanner;
 
 import com.acarballeira.exercicios.clases.exercicio9.Libro;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class BibliotecaLibros.
+ */
 public class BibliotecaLibros {
 
+    /** The Constant MAX_LIBROS. */
     private static final int MAX_LIBROS = 10;
+    
+    /** The biblioteca. */
     private static Libro[] biblioteca; 
+    
+    /** The Constant INCREMENTO_CODIGO. */
     private final static byte INCREMENTO_CODIGO = 5;
     
+    /**
+     * The main method.
+     *
+     * @param args the arguments
+     */
     public static void main(String[] args) {
         
         biblioteca = new Libro[MAX_LIBROS];
@@ -48,6 +62,11 @@ public class BibliotecaLibros {
 
     }
     
+    /**
+     * Listar.
+     *
+     * @param biblioteca the biblioteca
+     */
     public static void listar( Libro[] biblioteca ) {
   
         System.out.println("\nLISTADO\n========");
@@ -57,6 +76,14 @@ public class BibliotecaLibros {
        
     }
 
+    /**
+     * Novo libro.
+     *
+     * @param biblioteca the biblioteca
+     * @param MAX_LIBROS the max libros
+     * @param contador the contador
+     * @param contadorCodigo the contador codigo
+     */
     public static void novoLibro(Libro[] biblioteca, int MAX_LIBROS, int contador, int contadorCodigo) {
         Scanner sc = new Scanner(System.in);
             System.out.print("\nNOVO LIBRO\n===========\nPor favor, introduzca os datos do libro.\nTítulo: ");
@@ -72,6 +99,11 @@ public class BibliotecaLibros {
             
     }
     
+    /**
+     * Editar libro.
+     *
+     * @param codigo the codigo
+     */
     public static void editarLibro(int codigo) {
         Scanner sc = new Scanner(System.in);
         
@@ -103,6 +135,11 @@ public class BibliotecaLibros {
         }
     }
     
+    /**
+     * Borrar libro.
+     *
+     * @param codigo the codigo
+     */
     public static void borrarLibro(int codigo) {
         for (int i = 0; i < biblioteca.length; i++) {
             if (biblioteca[i].getCodigo() == codigo ) {
