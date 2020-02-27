@@ -1,7 +1,19 @@
+/*
+ * @Author Jose Manuel Sabarís García
+ */
 package com.acarballeira.exercicios.clases.exercicio4;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class PresoDriver.
+ */
 public class PresoDriver {
     
+    /**
+     * The main method.
+     *
+     * @param args the arguments
+     */
     public static void main(String[] args) {
     Preso p1,p2,p3,p4;
     Guardia g1;
