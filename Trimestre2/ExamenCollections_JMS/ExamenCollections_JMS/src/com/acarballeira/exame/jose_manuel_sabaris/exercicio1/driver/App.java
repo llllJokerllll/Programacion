@@ -63,7 +63,7 @@ public class App {
         while( !acceso ) {
             try {
                  opcion = Integer.parseInt(br.readLine());
-                 if (opcion >= 0 || opcion <= 5) {
+                 if (opcion >= 0 && opcion <= 5) {
                      acceso = true;
                  }
             } catch (NumberFormatException e) {
@@ -198,7 +198,7 @@ public class App {
         });
         
         for(ContaBancaria c : banco) {
-            if (c.getClass().getSimpleName().equals("Tarxeta")) { //Pode facerse con instanceof
+            if (c instanceof Tarxeta) { //Pode facerse con instanceof
                 System.out.println(c);
             }
             
