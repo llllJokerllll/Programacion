@@ -1,3 +1,6 @@
+/*
+ * @Author Jose Manuel Sabarís García
+ */
 package com.acarballeira.exercicios.bd.exercicio4;
 
 import java.sql.Connection;
@@ -7,8 +10,17 @@ import java.sql.Statement;
 
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Cliente.
+ */
 public class Cliente {
     
+    /**
+     * Obtener num clientes.
+     *
+     * @return the int
+     */
     public static int obtenerNumClientes() {
         int res = 0;
         

@@ -1,3 +1,6 @@
+/*
+ * @Author Jose Manuel Sabarís García
+ */
 package com.acarballeira.exercicios.bd.exercicio1;
 
 import java.sql.Connection;
@@ -6,14 +9,32 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class JDBC1.
+ */
 public class JDBC1 {
 
+    /** The Constant HOST. */
     private final static String HOST = "localhost";
+    
+    /** The Constant PORT. */
     private final static String PORT = "3306";
+    
+    /** The Constant DB. */
     private final static String DB = "bombones";
+    
+    /** The Constant USER. */
     private final static String USER = "Joker";
+    
+    /** The Constant PASSWORD. */
     private final static String PASSWORD = "Pw159159*";
     
+    /**
+     * The main method.
+     *
+     * @param args the arguments
+     */
     public static void main(String[] args) {
             
             String mysqlUrl = "jdbc:mysql://localhost/bombones?serverTimeZone=Europe/Madrid";

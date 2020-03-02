@@ -1,7 +1,7 @@
 /*
  * @Author Jose Manuel Sabarís García
  */
-package com.acarballeira.exercicios.bd.exercicio5;
+package com.acarballeira.exercicios.bd.exercicio6;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -167,7 +167,7 @@ public class Cliente {
      *
      * @return the list
      */
-    public List<Cliente> obter() {
+    public static List<Cliente> obter() {
         List<Cliente> lista = new ArrayList<>();
         int aux = 0;
         try {
@@ -196,7 +196,7 @@ public class Cliente {
      * @param iD the i D
      * @return the cliente
      */
-    public Cliente obter(int iD) {
+    public static Cliente obter(int iD) {
         Cliente c1 = new Cliente();
         try {
             Connection con = ConexionPool.obterConexion();
@@ -222,7 +222,7 @@ public class Cliente {
      * @param cliente the cliente
      * @return true, if successful
      */
-    public boolean rexistrar(Cliente cliente) {
+    public static boolean rexistrar(Cliente cliente) {
         boolean rs = false;
         try {
             Connection con = ConexionPool.obterConexion();
@@ -243,7 +243,7 @@ public class Cliente {
      * @param cliente the cliente
      * @return true, if successful
      */
-    public boolean eliminar(Cliente cliente) {
+    public static boolean eliminar(Cliente cliente) {
         boolean rs = false;
         try {
             Connection con = ConexionPool.obterConexion();
@@ -264,7 +264,7 @@ public class Cliente {
      * @param cliente the cliente
      * @return true, if successful
      */
-    public boolean actualizar(Cliente cliente) {
+    public static boolean actualizar(Cliente cliente) {
         boolean rs = false;
         try {
             Connection con = ConexionPool.obterConexion();

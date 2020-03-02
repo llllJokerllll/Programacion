@@ -1,3 +1,6 @@
+/*
+ * @Author Jose Manuel Sabarís García
+ */
 package com.acarballeira.exercicios.bd.exercicio4;
 
 import java.io.FileReader;
@@ -8,15 +11,33 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Conexion.
+ */
 public class Conexion {
 
+    /** The host. */
     private static String host;
+    
+    /** The port. */
     private static String port;
+    
+    /** The db. */
     private static String db;
+    
+    /** The user. */
     private static String user;
+    
+    /** The password. */
     private static String password;
+    
+    /** The con. */
     private static Connection con = null;
     
+    /**
+     * Instantiates a new conexion.
+     */
     private Conexion() {
         
             cargarPropiedades2();
@@ -32,6 +53,11 @@ public class Conexion {
         }      
         
     
+    /**
+     * Obter conexion.
+     *
+     * @return the connection
+     */
     public static Connection obterConexion() {
         
         //Connection com = null;
@@ -41,6 +67,9 @@ public class Conexion {
         return con;
     }
     
+    /**
+     * Cargar propiedades.
+     */
     private static void cargarPropiedades() {
         
         try {
@@ -62,6 +91,9 @@ public class Conexion {
         
     }
     
+    /**
+     * Cargar propiedades 2.
+     */
     private static void cargarPropiedades2() {
         
         try {

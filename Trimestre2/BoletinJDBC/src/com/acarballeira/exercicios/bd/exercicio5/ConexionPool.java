@@ -1,3 +1,6 @@
+/*
+ * @Author Jose Manuel Sabarís García
+ */
 package com.acarballeira.exercicios.bd.exercicio5;
 
 import java.io.IOException;
@@ -8,18 +11,39 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Properties;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class ConexionPool.
+ */
 public class ConexionPool {
 
+    /** The host. */
     private static String host;
+    
+    /** The port. */
     private static String port;
+    
+    /** The db. */
     private static String db;
+    
+    /** The user. */
     private static String user;
+    
+    /** The password. */
     private static String password;
 
+    /** The lista. */
     private static ArrayList<Connection> lista = null;
+    
+    /** The Constant NUMCON. */
     private static final int NUMCON = 5;
+    
+    /** The Constant NUMCONINC. */
     private static final int NUMCONINC = 5;
     
+    /**
+     * Instantiates a new conexion pool.
+     */
     private ConexionPool() {
         
             cargarPropiedades();
@@ -35,6 +59,11 @@ public class ConexionPool {
         }      
         
     
+    /**
+     * Obter conexion.
+     *
+     * @return the connection
+     */
     public static Connection obterConexion() {
         
         if (lista == null) {
@@ -60,12 +89,20 @@ public class ConexionPool {
         
     }
     
+    /**
+     * Devolver conexion.
+     *
+     * @param con the con
+     */
     public static void devolverConexion(Connection con) {
         
         lista.add(con);
 
     }
     
+    /**
+     * Cargar propiedades.
+     */
     private static void cargarPropiedades() {
         
         try {

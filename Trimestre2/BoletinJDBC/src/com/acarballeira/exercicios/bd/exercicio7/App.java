@@ -1,14 +1,12 @@
 /*
  * @Author Jose Manuel Sabarís García
  */
-package com.acarballeira.exercicios.bd.exercicio5;
+package com.acarballeira.exercicios.bd.exercicio7;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-
-import com.acarballeira.exercicios.bd.exercicio6.Cliente;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -52,10 +50,13 @@ public class App {
                 e.printStackTrace();
             }
             
+            ClienteDAO c;
+            c = new ClienteDAO();
+            
             switch (opcion) {
                 case 1:
                     Cliente c1 = new Cliente();
-                    ArrayList<Cliente> l = (ArrayList<Cliente>) c1.obter();
+                    ArrayList<Cliente> l = (ArrayList<Cliente>) c.obter();
                     for (Cliente elemento : l) {
                         System.out.println(elemento);
                     }
@@ -69,7 +70,7 @@ public class App {
                     System.out.print("Introduzca los apellidos: ");
                     apellidos2 = bf.readLine();
                     Cliente c2 = new Cliente();
-                    c2.rexistrar(c2);
+                    c.rexistrar(c2);
                 } catch (NumberFormatException e) {
                     e.printStackTrace();
                 } catch (IOException e) {
@@ -94,8 +95,8 @@ public class App {
                     }
                     Cliente c3 = new Cliente( nombre3, apellidos3);
                     c3.setIdCliente(idCliente3);
-                    c3.actualizar(c3);  
-                    if (!c3.actualizar(c3)) {
+                    c.actualizar(c3);  
+                    if (!c.actualizar(c3)) {
                         System.out.println("Cliente modificado correctamente");
                     } else {
                         System.out.println("Cliente no encontrado");
@@ -107,10 +108,10 @@ public class App {
                     System.out.print("Por favor, introduzca el ID del cliente a eliminar: ");
                     try {
                         idCliente = Integer.parseInt(bf.readLine());
-                        c4 = c4.obter(idCliente);
-                        if ((c4 = c4.obter(idCliente)) != null) {
-                           c4.eliminar(c4);
-                           if (!c4.eliminar(c4)) {
+                        c4 = c.obter(idCliente);
+                        if ((c4 = c.obter(idCliente)) != null) {
+                           c.eliminar(c4);
+                           if (!c.eliminar(c4)) {
                                System.out.println("Cliente eliminado correctamente");
                            } else {
                                System.out.println("Cliente no encontrado");

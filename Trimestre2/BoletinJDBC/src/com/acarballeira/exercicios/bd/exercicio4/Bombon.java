@@ -1,3 +1,6 @@
+/*
+ * @Author Jose Manuel Sabarís García
+ */
 package com.acarballeira.exercicios.bd.exercicio4;
 
 import java.sql.Connection;
@@ -5,8 +8,17 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Bombon.
+ */
 public class Bombon {
     
+    /**
+     * Obter num bombons.
+     *
+     * @return the int
+     */
     public static int obterNumBombons() {
         int res = 0;
         

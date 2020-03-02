@@ -1,9 +1,8 @@
 /*
  * @Author Jose Manuel Sabarís García
  */
-package com.acarballeira.exercicios.bd.exercicio4;
+package com.acarballeira.exercicios.bd.exercicio6;
 
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
@@ -109,7 +108,7 @@ public class ConexionPool {
         try {
             String fileName = "/com/acarballeira/recursos/config.inc";
             //InputStream is = ClassLoader.getSystemResourceAsStream("com/acarballeira/recursos/config.inc");
-            InputStream is = Conexion.class.getResourceAsStream(fileName);
+            InputStream is = ConexionPool.class.getResourceAsStream(fileName);
             Properties props = new Properties();
             props.load(is);
             user = props.getProperty("user");
