@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="290.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/13.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.acarballeira.probas5.controlador.OperacionsController">
+<AnchorPane id="AnchorPane" prefHeight="290.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/13.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.acarballeira.proba9.controlador.SumaController">
    <children>
       <Button fx:id="btnSumar" layoutX="152.0" layoutY="151.0" mnemonicParsing="false" onAction="#sumar" prefHeight="25.0" prefWidth="150.0" text="Sumar" />
       <TextField fx:id="txtOp1" alignment="TOP_LEFT" layoutX="152.0" layoutY="62.0" prefHeight="25.0" prefWidth="150.0" />
