@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="AceptaElReto/src"/>
+	<classpathentry kind="src" path="BoletinClasesImplementacion/src"/>
+	<classpathentry kind="src" path="BoletinClasesImplementacion2/src"/>
+	<classpathentry kind="src" path="BoletinClasesImplementacion3/src"/>
+	<classpathentry kind="src" path="BoletinColecciones/src"/>
+	<classpathentry kind="src" path="BoletinExcepciones/src"/>
+	<classpathentry kind="src" path="BoletinJDBC/src"/>
+	<classpathentry kind="src" path="Clases/src"/>
+	<classpathentry kind="src" path="CursoJDBC/src"/>
+	<classpathentry kind="src" path="Diagramas_De_Clase/src"/>
+	<classpathentry kind="src" path="EjemploAbsInter/src"/>
+	<classpathentry kind="src" path="exame/ProgExame_JMS/src"/>
+	<classpathentry kind="src" path="ExameCollections2_JMS/src"/>
+	<classpathentry kind="src" path="ExamenClasesObjetos_JMS/src"/>
+	<classpathentry kind="src" path="ExamenCollections_JMS/ExamenCollections_JMS/src"/>
+	<classpathentry kind="src" path="ExamenCollections_JMS/src"/>
+	<classpathentry kind="src" path="ExamePseint_JMS/src"/>
+	<classpathentry kind="src" path="Excepciones/src"/>
+	<classpathentry kind="src" path="Futbolistas/src"/>
+	<classpathentry kind="src" path="Gatitos/src"/>
+	<classpathentry kind="src" path="Interfaces/src"/>
+	<classpathentry kind="src" path="JDBC/src"/>
+	<classpathentry kind="src" path="Pong/src"/>
+	<classpathentry kind="src" path="ProbaJfx_1/src"/>
+	<classpathentry kind="src" path="PruebaEntradaSalida/src"/>
+	<classpathentry kind="src" path="Pruebas/src"/>
+	<classpathentry kind="lib" path=".sonarlint/default/.sonartmp_1320759262947011246/sonarlint-slf4j-sonar-log5818630180657181496.jar"/>
+	<classpathentry kind="lib" path=".sonarlint/default/.sonartmp_13655203242095938608/sonarlint-slf4j-sonar-log13389208105506518707.jar"/>
+	<classpathentry kind="lib" path=".sonarlint/default/.sonartmp_16649599188750363648/sonarlint-slf4j-sonar-log11026447843557391820.jar"/>
+	<classpathentry kind="lib" path="exame/Utilidades.jar"/>
+	<classpathentry kind="output" path="AceptaElReto/bin"/>
+</classpath>
