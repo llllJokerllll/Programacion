@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"com.proyecto.javafx.app","l":"App"},{"p":"com.proyecto.javafx.modelo","l":"ConexionPool"},{"p":"com.proyecto.javafx.modelo","l":"Juego"},{"p":"com.proyecto.javafx.modelo","l":"JuegoDAO"},{"p":"com.proyecto.javafx.app","l":"JuegosController"},{"p":"com.proyecto.javafx.app","l":"JuegosDiagController"}]

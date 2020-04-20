@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.proyecto.javafx.app"},{"l":"com.proyecto.javafx.config"},{"l":"com.proyecto.javafx.modelo"},{"l":"com.proyecto.javafx.recursos"},{"l":"com.proyecto.javafx.vista"}]
